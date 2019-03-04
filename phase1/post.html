@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post Your Ad</title>
+  <link rel="stylesheet" href="post.css">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="ie-emulation-modes-warning.js"></script>
+</head>
+
+<body>
+  <div class="container">
+  <form class="form-post" action="user" method="post">
+    <select class="form-control" id="category" onchange="tag()" required autofocus>
+      <option value="" disabled selected style="display:none">Choose a subject category</option>
+      <option value="">Book</option>
+      <option value="">Notes</option>
+      <option value="appliance">Electronics</option>
+      <option value="">Notebook</option>
+      <option value="appliance">Stationery</option>
+      <option value="appliance">IClicker</option>
+      <option value="appliance">Calculator</option>
+      <option value="appliance">Others</option>
+    </select>
+    <select class="form-control" id="type" required autofocus>
+      <option value="" disabled selected style="display:none">Choose the Ad type</option>
+      <option value="">Selling</option>
+      <option value="">Trading</option>
+      <option value="">Giveaway</option>
+      <option value="">Wanting</option>
+      <option value="">Lost&amp;Found</option>
+    </select>
+    <select class="form-control" id="type2" style="display:none" required autofocus>
+      <option value="" disabled selected style="display:none">Choose the Ad type</option>
+      <option value="">Selling</option>
+    </select>
+    <input type="text" class="form-control" placeholder="Title" required autofocus>
+
+    <textarea type="text" maxlength="500" class="form-control" placeholder="Write something about your Ad.." required autofocus></textarea>
+
+    <select class="form-control" id="location" required autofocus>
+      <option value="" disabled selected style="display:none">Location</option>
+        <option value="ab">Alberta</option>
+        <option value="bc">British Columbia</option>
+        <option value="mb">Manitoba</option>
+        <option value="nb">New Brunswick</option>
+        <option value="nl">Newfoundland and Labrador</option>
+        <option value="nt">Northwest Territories</option>
+        <option value="ns">Nova Scotia</option>
+        <option value="nu">Nunavut</option>
+        <option value="on">Ontario</option>
+        <option value="pe">Prince Edward Island</option>
+        <option value="qc">Quebec</option>
+        <option value="sk">Saskatchewan</option>
+        <option value="yt">Yukon</option>
+    </select>
+
+    <p class="attach">Attach a photo</p>
+    <div class="photo">
+      <input type="file" class="form-control" accept="image/*" onchange="photoView()" id="photo">
+      <img src="">
+    </div>
+    <button class="post-ad" type="submit" onclick="postAd()">Post Your Ad</button>
+    </form>
+  </div>
+  <script src=""></script>
+  <script src="ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

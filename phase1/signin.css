@@ -1,0 +1,99 @@
+body {
+  padding-top: 99px;
+  padding-bottom: 99px;
+  font-family: "Times New Roman", Georgia, Serif;
+  background-image: url("bgd.jpg");
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading {
+  margin-bottom: 10px;
+  font-size: 26px;
+	font-weight: 100;
+	color: #efefef;
+	text-align: center;
+}
+.form-signin .checkbox {
+	margin-bottom: 10px;
+	font-weight: 100;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  color: #efefef;
+	background: rgba(0, 0, 0, .1);
+	border: none;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.needhelp {
+	margin-left: 2px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.needhelp a {
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 100;
+	text-decoration: none;
+	color: #efefef;
+}
+
+.signin-btn {
+	font-size: 15px;
+	font-weight: 100;
+	width: 300px;
+	height: 40px;
+	margin-top: 10px;
+	color: #fdffdd;
+	background: rgba(0, 0, 0, .3);
+	border: none;
+	border-radius: 6px;
+	outline-color: #fbff8c;
+}
+.signin-btn:hover {
+	color: #fdffdd;
+	background: rgba(0, 0, 0, .4);
+}
+
+.newtoPup {
+	font-size: 14px;
+	font-weight: 100;
+	color: #efefef;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.newtoPup a {
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 100;
+	text-decoration: none;
+	color: #efefef;
+}
+.newtoPup a:hover {
+	color: ##fdffdd;
+}
