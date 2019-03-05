@@ -11,31 +11,28 @@
     <title>Sign In</title>
 
     <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="signin.css" rel="stylesheet">
-    <script src="ie-emulation-modes-warning.js"></script>
   </head>
 
   <body>
 
     <div class="container">
 
-      <form class="form-signin" action="/user" method="get">
+      <form id="userLoginForm" class="form-signin" action="/user" method="get">
         <h2 class="form-signin-heading">Sign In</h2>
         <label for="email" class="sr-only">Email</label>
-        <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+        <input type="email" id="userLoginEmail" class="form-control" placeholder="Email/Username" required autofocus>
         <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="Password" required autofocus>
+        <input type="password" id="userLoginPassword" class="form-control" placeholder="Password" required autofocus>
         <p class="needhelp"><a href="#">Need help?</a></p>
         <button class="signin-btn" type="submit">Sign In</button>
-        <p class="newtoPup">New to Bookstore? <a href="register.html">Register now</a></p>
+        <p class="newUser">New to Bookstore? <a href="register.html">Register now</a></p>
       </form>
 
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="signin.js"></script>
 
-    <script src=""></script>
-
-    <script src="ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
