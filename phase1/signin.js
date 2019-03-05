@@ -6,7 +6,7 @@ class user {
   constructor(username, password, type) {
     this.username = username;
     this.password = password;
-    this.type = type;
+    this type = type;
     this.id = numUser;
     numUser++;
   }
@@ -19,7 +19,7 @@ const loginForm = document.querySelector('#userLoginForm');
 loginForm.addEventListener('submit', userLoginValidate);
 
 function userLoginValidate(e) {
-  e.preventDefault()
+  e.preventDefault();
   var email = document.getElementById('userLoginEmail').value;
   var password = document.getElementById('userLoginPassword').value;
   if(email === 'user' && password == 'user') {
