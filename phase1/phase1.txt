@@ -1,0 +1,1 @@
+Our web app is an appplication for Uoft Students to buy items, and sell items by posting their own ads.
