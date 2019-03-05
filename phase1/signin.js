@@ -28,7 +28,7 @@ function userLoginValidate(e) {
     return false;
   } else if( email === 'admin' && password === 'admin') {
     alert('Admin logged in');
-    window.location = 'index.html'
+    window.location = 'adminPage.html'
     return false;
   } else {
     alert('Username/password is incorrect')
