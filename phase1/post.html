@@ -11,8 +11,6 @@
     <link rel="icon" href="">
 
     <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <script src="ie-emulation-modes-warning.js"></script>
 </head>
 
 <body>
@@ -35,7 +33,6 @@
       <option value="">Trading</option>
       <option value="">Giveaway</option>
       <option value="">Wanting</option>
-      <option value="">Lost&amp;Found</option>
     </select>
     <select class="form-control" id="type2" style="display:none" required autofocus>
       <option value="" disabled selected style="display:none">Choose the Ad type</option>
@@ -67,11 +64,10 @@
       <input type="file" class="form-control" accept="image/*" onchange="photoView()" id="photo">
       <img src="">
     </div>
-    <button class="post-ad" type="submit" onclick="postAd()">Post Your Ad</button>
+    <button id="post" class="post-ad" type="submit" onclick="postAd()">Post Your Ad</button>
     </form>
   </div>
   <script src=""></script>
-  <script src="ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>
