@@ -6,7 +6,7 @@ class user {
   constructor(username, password, type) {
     this.username = username;
     this.password = password;
-    this type = type;
+    this.type = type;
     this.id = numUser;
     numUser++;
   }
