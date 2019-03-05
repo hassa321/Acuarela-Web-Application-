@@ -16,22 +16,21 @@ users.push(new user('user', 'user', 1));
 users.push(new user('admin', 'admin', 0));
 
 const loginForm = document.querySelector('#userLoginForm');
-loginForm.addEventListener('submit', userLoginValidation);
+loginForm.addEventListener('submit', userLoginValidate);
 
-function userLoginValidation(e) {
-  e.preventDefault();
-  const email = document.querySelector('#userLoginEmail').value;
-  const password = document.querySelector('userLoginPassword').value;
-  if(email === 'user' && password === 'user') {
+function userLoginValidate(e) {
+  var email = document.getElementById('userLoginEmail').value;
+  var password = document.getElementById('userLoginPassword').value;
+  if(email === 'user' && password == 'user') {
     alert('User logged in');
-    locate = 'index.html'
+    window.location = 'index.html'
     return false;
   } else if( email === 'admin' && password === 'admin') {
     alert('Admin logged in');
-    locate = 'index.html'
+    window.location = 'index.html'
     return false;
   } else {
-    alert('Username and password do not match')
+    alert('Username/password is incorrect')
     return false;
   }
 }
