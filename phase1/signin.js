@@ -19,6 +19,7 @@ const loginForm = document.querySelector('#userLoginForm');
 loginForm.addEventListener('submit', userLoginValidate);
 
 function userLoginValidate(e) {
+  e.preventDefault()
   var email = document.getElementById('userLoginEmail').value;
   var password = document.getElementById('userLoginPassword').value;
   if(email === 'user' && password == 'user') {
