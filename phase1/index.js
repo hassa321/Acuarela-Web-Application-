@@ -2,12 +2,11 @@ const classes = document.querySelectorAll('.classButton');
 const postings = document.querySelectorAll('.posting');
 
 for (let i = 0; i < classes.length; i++){
-    classes[i].addEventListener('click', showSelected(this.event));
+    classes[i].addEventListener('click', showSelected);
 }
 
 function showSelected(e) {
-    console.log('clicked');
-    const className = e.target.element.textContent;
+    const className = e.target.textContent;
 
     for (let i = 0; i < postings.length; i++){
         if (postings[i].classList.contains(className)){
