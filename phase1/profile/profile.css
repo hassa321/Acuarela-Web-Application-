@@ -29,6 +29,8 @@ h3 {
 	margin-bottom: 10px;
 }
 
+
+
 #userName {
 	font-weight: 600;
 	font-size: 16pt;
@@ -74,42 +76,56 @@ h3 {
 	margin-bottom: 10px;
 	border: 1px solid black;
 	width: 100%;
+	max-height: 135px;
+	overflow: hidden;
 }
 
 .thumbContainer {
 	float: left;
 	display: inline-block;
+	margin: 5px;
 	margin-right: 10px;
+
+	max-height: 125px;
 }
 
 .adThumbnail {
-	width: 120px;
-	padding: 5px;
-	padding-right: 0px;
 	display: inline-block;
+	max-height: inherit;
 }
 
 .adDetails {
-	margin-left: auto;
-	margin-right: auto;
+	padding-left: 5px;
+	float: left;
 	display: inline-block;
 	border-left: 1px solid grey;
+	height: inherit;
+	max-width: 900px;
+	text-overflow: ellipsis;
 }
 
 .adTitle {
 	float: left;
 	display: inline-block;
 	font-weight: 500;
-
+	max-width: inherit;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .adPrice {
 	float: left;
 	display: inline-block;
 	font-weight: 800;
+	max-width: inherit;
+	text-align: right;
 }
 
 .adDesc {
 	float: left;
 	display: inline-block;
+	max-width: inherit;
+	max-height: 86px;
+	
 }
