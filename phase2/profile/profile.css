@@ -1,0 +1,131 @@
+body {
+	font-family: Segoe UI, sans-serif;
+	font-size: 14pt;
+}
+
+
+h3 {
+	font-family: inherit;
+	font-size: 16.5pt;
+	margin-top: 0px;
+	margin-bottom: 13px;
+}
+
+
+
+#main {
+	margin-left: auto;
+	padding-top: 30px;
+	width: 90%;
+}
+
+#leftSideBar {
+	float: left;
+	margin-right: 50px;
+}
+
+#picContainer {
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+
+
+#userName {
+	font-weight: 600;
+	font-size: 16pt;
+}
+
+#contact {
+
+}
+
+#contactHeader {
+	display: inline-block;
+	margin-top: 84px;
+	font-size: 20pt;
+	font-weight: 6000;
+}
+
+.contactInfo {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+#adsContainer {
+	float: left;
+	width: 1100px;
+	border-radius: 10px;
+	border: 1pt solid grey;
+	background-color: beige;
+}
+
+#adHeader {
+	font-size: 21pt;
+	text-align: center;
+}
+
+#adList {
+	width: 95%;
+	margin: auto;
+	min-height: 800px;
+}
+
+.adItem {
+	display: inline-block;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	width: 100%;
+	max-height: 135px;
+	overflow: hidden;
+}
+
+.thumbContainer {
+	float: left;
+	display: inline-block;
+	margin: 5px;
+	margin-right: 10px;
+
+	max-height: 125px;
+}
+
+.adThumbnail {
+	display: inline-block;
+	max-height: inherit;
+}
+
+.adDetails {
+	padding-left: 5px;
+	float: left;
+	display: inline-block;
+	border-left: 1px solid grey;
+	height: inherit;
+	max-width: 900px;
+	text-overflow: ellipsis;
+}
+
+.adTitle {
+	float: left;
+	display: inline-block;
+	font-weight: 500;
+	max-width: inherit;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.adPrice {
+	float: left;
+	display: inline-block;
+	font-weight: 800;
+	max-width: inherit;
+	text-align: right;
+}
+
+.adDesc {
+	float: left;
+	display: inline-block;
+	max-width: inherit;
+	max-height: 86px;
+	
+}

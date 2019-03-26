@@ -1,0 +1,101 @@
+.navBar {
+	background-color: rgb(235, 235, 235);
+	color: grey;
+	text-align: center;
+	padding: 20px 0  20px 0 ;
+	list-style: none;
+
+
+
+}
+
+.navBar li {
+display: inline-block;
+padding-right: 55px;
+}
+
+.navBar li a {
+text-decoration: none;
+color:black;
+}
+
+.navBar li a:hover{
+	color: white;
+}
+
+
+#tableRows{
+	padding-right: 100px;
+}
+.tableColumns{
+	text-align: center;
+}
+#userTable{
+	padding-top: 15px;
+}
+#adTable{
+	padding-top: 100px;
+}
+table{
+	
+	border-collapse: collapse;
+	width: 90%;
+
+}
+#tbody th{
+	border-bottom: 2px solid black;
+	color: #816212;
+	font-size: 20px;
+
+}
+
+td{
+	padding-top: 20px;
+	padding-bottom: 20px;
+/*	border: 2px solid black;
+*/
+	border-bottom: 1px solid black;
+
+}
+
+#tbody2 th{
+	border-bottom: 2px solid black;
+	color: black;
+	font-size: 20px;
+
+}
+
+#main h1{
+color: grey
+}
+#main {
+	position: absolute;
+	top:5px;
+	left:15px;
+}
+
+#main h1:hover{
+	color: white	;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
