@@ -9,43 +9,34 @@ app.use(express.static(__dirname + '/pub'));
 
 
 app.get('/', (req, res) => {
-    res.render('index.html');
 })
 
 app.get('/signin', (req, res) => {
-    res.render('signin.html');
 })  
-
 app.get('/register', (req, res) => {
-    res.render('register.html');
 })
 
 app.get('/admin', (req, res) => {
-    res.render('admin.html');
 })
 
 app.get('/profile', (req, res) => {
-    res.render('profile.html');
 })
 
 app.get('/newpost', (req, res) => {
-    res.render('post.html');
 })
 
-app.post('/post', (req, res) => {
-
+app.get('/ad/:id', (req, res) => {
+    res.send(req.params.id);
 })
 
-app.post('/register', (req, res) => {
-    
-})
 
-app.post('/register', (req, res) => {
-    
-})
+
+
+
+
 
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
-	log(`Listening on port ${port}...`)
+	console.log(`Listening on port ${port}...`)
 }) 
