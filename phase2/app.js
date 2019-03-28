@@ -47,5 +47,5 @@ app.post('/register', (req, res) => {
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
-	log('Listening on port 3000...')
+	log(`Listening on port ${port}...`)
 }) 
