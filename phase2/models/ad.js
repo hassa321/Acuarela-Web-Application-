@@ -17,7 +17,13 @@ const Ad = mongoose.model('Ad', {
     type:{
         type: String,
         required: true,
-    }
+	},
+	
+	class_code:{
+		type: String,
+		minlength: 6,
+		maxlength: 6
+	}
 })
 
 module.exports = { Ad }
