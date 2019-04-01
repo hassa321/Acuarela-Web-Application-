@@ -68,7 +68,7 @@ app.post('/ads',(req, res)=> {
 app.get('/ads', (req, res) => {
 	// Add code here
 	Ad.find().then((advert) => {
-		res.send( { Ad });
+		res.send(  advert );
 	}, (error) => {
 		res.status(400).send(error);
 	});
@@ -101,35 +101,41 @@ app.get('/ads/:id', (req, res) => {
 
 
 app.delete('/ads/:id',(req,res)=>{
+// Add code here
 
+	// get paramters from body of request
 	const id = req.params.id;
+			
+				// CHECK if Valid Ad Id and
+	if (!ObjectID.isValid(id)) {
+		return res.status(404).send();
+			
 
-	//check if object is valid
-	if(!ObjectID.isValid(id)){
-		res.status(404).send()
-	}
+	} 
 
-	Advert.findbyID(id).then((result)=>{
-		// if Ad doesnt exist, send 404
-		if (!result) {
+	
+	Ad.findById(id).then((ad) => {
+		
+		// if ad doesnt exist, send 404
+		if (!ad) {
 			res.status(404).send();
 		}
-
-		result.id(id).remove();
-		result.save().then((newResult)=>{
+		// remove ad
+		ad.id(id).remove();
+		// save
+		ad.save().then((newR) => {
 			if (!newR) {
 				res.status(404).send();
 			}
-			res.send(result);
+			res.send(ad);
+		}).catch((err) => {
 
-		}).catch((err)=>{
-			res.status(400).send()
-		})
-	}).catch((error)=>{
-		res.status(400).send();
-	})
-
-
+			res.status(400).send(err);
+		});
+	}).catch((error) => {
+		console.log('here')
+		res.status(400).send(error);
+	});
 
 })
 
