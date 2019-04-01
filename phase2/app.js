@@ -112,33 +112,16 @@ app.delete('/ads/:id',(req,res)=>{
 			
 
 	} 
-
-	
-	Ad.findById(id).then((ad) => {
-		
-		// if ad doesnt exist, send 404
-		if (!ad) {
-			res.status(404).send();
-		}
-		// remove ad
-		ad.id(id).remove();
-		// save
-		ad.save().then((newR) => {
-			if (!newR) {
-				res.status(404).send();
-			}
-			res.send(ad);
-		}).catch((err) => {
-
-			res.status(400).send(err);
-		});
-	}).catch((error) => {
-		console.log('here')
-		res.status(400).send(error);
-	});
-
+	Ad.findOneAndDelete({_id: req.params.id}, req.body, function(err,data)
+	{
+    if(!err){
+        console.log("Deleted");
+        res.send(data)
+    }
+	})
 })
 
+	
 
 
 
