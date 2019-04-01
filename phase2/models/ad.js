@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Advertisment = mongoose.model('Advertisment', {
+const Ad = mongoose.model('Ad', {
 	title: {
 		type: String,
 		required: true,
@@ -13,7 +13,6 @@ const Advertisment = mongoose.model('Advertisment', {
         max: 1000, 
 
     },
-    id: moongoose.Schema.Types.objectId,
     
     type:{
         type: String,
@@ -21,4 +20,4 @@ const Advertisment = mongoose.model('Advertisment', {
     }
 })
 
-module.exports = { Advertisment }
+module.exports = { Ad }
