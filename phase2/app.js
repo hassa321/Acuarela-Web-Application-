@@ -41,15 +41,16 @@ app.post('/ads',(req, res)=> {
 	{
 	"title": <Ad>
 	"description": <Advertisement description>
-	"Type": <Ad Type
+    "type": <Ad Type>
+    "class_code": <Class code add belongs to>
 	}
 	*/
 	// Create a new Advertisment
 	const Advert = new Ad({
 		title: req.body.title,
 		price: req.body.price,
-		type: req.body.type
-
+		type: req.body.type,
+        class_code: req.body.class_code 
 	})
 
 	// Save advertisement to the database
@@ -62,9 +63,6 @@ app.post('/ads',(req, res)=> {
 })
 
 
-
-/// Route for getting all restaurant information.
-// GET /restaurants
 app.get('/ads', (req, res) => {
 	// Add code here
 	Ad.find().then((advert) => {
@@ -106,11 +104,8 @@ app.delete('/ads/:id',(req,res)=>{
 	// get paramters from body of request
 	const id = req.params.id;
 			
-				// CHECK if Valid Ad Id and
 	if (!ObjectID.isValid(id)) {
 		return res.status(404).send();
-			
-
 	} 
 	Ad.findOneAndDelete({_id: req.params.id}, req.body, function(err,data)
 	{
