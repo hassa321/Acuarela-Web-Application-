@@ -8,6 +8,9 @@
 
 
 }
+body{
+  background-image: url("../images/bgd.jpg");
+}
 
 .navBar li {
 display: inline-block;
