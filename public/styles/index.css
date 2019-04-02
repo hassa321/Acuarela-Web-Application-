@@ -1,3 +1,7 @@
+
+body{
+  background-image: url("../images/bgd.jpg");
+}
 .thumbnail {
     width: 180px;
     padding: 0;
@@ -34,7 +38,7 @@ p {
     position: absolute; 
     top: 100; /* Stay at the top */
     left: 10px;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(red);
     padding-top: 20px;
     padding-bottom: 20px;
   }

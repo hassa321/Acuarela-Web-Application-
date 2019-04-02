@@ -1,9 +1,9 @@
-const classes = document.querySelectorAll('.classButton');
-const postings = document.querySelectorAll('.posting');
+// const classes = document.querySelectorAll('.classButton');
+// const postings = document.querySelectorAll('.posting');
 
-for (let i = 0; i < classes.length; i++){
-    classes[i].addEventListener('click', showSelected);
-}
+// for (let i = 0; i < classes.length; i++){
+//     classes[i].addEventListener('click', showSelected);
+// }
 
 function showSelected(e) {
     const className = e.target.textContent;
@@ -17,4 +17,38 @@ function showSelected(e) {
         }
     }
 }
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // server call 
+  // server call will bring JSON file of ad elemets 
+
+  const allads= JSON.parse(data)
+  // check if there are no ads 
+  if(allads.length!=0){
+ // for each JSON element in json data, make a post and add to DOM   
+    for(const i =0; i<allads.length;i++){
+         
+    }
+
+
+
+
+  }
+
+
+  // for each JSON element in json data, make a post and add to DOM
+
+
+
+
+
+
+});
+
 

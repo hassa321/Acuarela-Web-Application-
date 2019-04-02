@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
 	}
 })
 
-// Our own student finding function 
+// Our own user finding function 
 UserSchema.statics.findByEmailPassword = function(email, password) {
 	const User = this
 

@@ -3,7 +3,7 @@ body {
   padding-bottom: 99px;
   background-color: #fff;
   font-family: "Times New Roman", Georgia, Serif;
-  background-image: url("bgd.jpg");
+  background-image: url("../images/bgd.jpg");
 }
 
 .form-register {
