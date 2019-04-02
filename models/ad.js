@@ -18,6 +18,10 @@ const Ad = mongoose.model('Ad', {
         type: String,
         required: true,
 	},
+	location:{
+		type: String,
+		required: true,
+	}
 	
 })
 

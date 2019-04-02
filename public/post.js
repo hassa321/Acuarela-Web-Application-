@@ -33,7 +33,8 @@ function addPostDb() {
     let data = {
        title,
        price,
-       type
+       type,
+       location
     }
     // Create our request constructor with all the parameters we need
     const request = new Request(url, {

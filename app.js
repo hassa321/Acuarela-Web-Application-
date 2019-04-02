@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 const bodyParser = require('body-parser') // middleware for parsing HTTP body
 const { ObjectID } = require('mongodb')
 
-const { mongoose } = require('./mongoose')
+const { mongoose } = require('./db/mongoose')
 
 // import the models
 const { Ad } = require('./models/ad')
