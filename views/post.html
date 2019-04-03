@@ -8,36 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<!--     <link href="bootstrap.min.css" rel="stylesheet">
- --></head>
+    <link rel="icon" href="../public/images/icon.jpg">
 
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
 
 <body>
-  <!-- Top navigation bar -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./index.html">U of T Flea Market</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./signin.html">Sign In</a></li>
-                        <li><a href="./post.html">Post An Ad</a></li>
-                        <li><a href="./profile.html">My Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
   <div class="container">
   <form class="form-post" action="user" method="post">
-    <select class="form-control" id="category"  required autofocus>
+    <select class="form-control" id="category" onchange="tag()" required autofocus>
       <option value="" disabled selected style="display:none">Choose a subject category</option>
-      <option value="">Book</option>
-      <option value="">Notes</option>
+      <option value="">Textbook</option>
+      <option value="">Course Notes</option>
       <option value="appliance">Electronics</option>
-      <option value="">Notebook</option>
       <option value="appliance">Stationery</option>
       <option value="appliance">IClicker</option>
       <option value="appliance">Calculator</option>
@@ -46,18 +29,23 @@
     <select class="form-control" id="type" required autofocus>
       <option value="" disabled selected style="display:none">Choose the Ad type</option>
       <option value="">Selling</option>
-      <option value="">Trading</option>
+      <option value="">Swapping/Trading</option>
       <option value="">Giveaway</option>
       <option value="">Wanting</option>
     </select>
-    <select class="form-control" id="type2" style="display:none" required autofocus>
-      <option value="" disabled selected style="display:none">Choose the Ad type</option>
-      <option value="">Selling</option>
+    <input type="price" class="form-control" placeholder="Price: $" id="price" autofocus>
+    <select class="form-control" id="type" required autofocus>
+      <option value="" disabled selected style="display:none">Choose the condition of the product</option>
+      <option value="">New</option>
+      <option value="">Used - Like New</option>
+      <option value="">Used - Very Good</option>
+      <option value="">Used - Good</option>
+      <option value="">Used - Acceptable</option>
     </select>
-    <input type="text" class="form-control" id ="title" placeholder="Title" required autofocus>
-    <input type="number" class="form-control" id ="price" placeholder="Price" required autofocus>
 
-    <textarea type="text" maxlength="500" class="form-control" id = "description"placeholder="Write something about your Ad.." required autofocus></textarea>
+    <input type="text" class="form-control" placeholder="Title" required autofocus>
+
+    <textarea type="text" maxlength="500" class="form-control" placeholder="Write something about your Ad.." required autofocus></textarea>
 
     <select class="form-control" id="location" required autofocus>
       <option value="" disabled selected style="display:none">Location</option>
@@ -71,13 +59,15 @@
         <option value="ot">Others</option>
     </select>
 
-    
-    <button id="post" class="post-ad" type="submit" onclick="addPostDb()">Post Your Ad</button>
+    <p class="attach">Attach a photo</p>
+    <div class="photo">
+      <input type="file" class="form-control" accept="image/*" onchange="photoView()" id="photo">
+      <img src="">
+    </div>
+    <button id="post" class="post-ad" type="submit" onclick="postAd()">Post Your Ad</button>
     </form>
   </div>
-  <script src="../public/post.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <script src=""></script>
 </body>
 
 </html>
