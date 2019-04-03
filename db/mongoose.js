@@ -1,10 +1,9 @@
-const mongoose = require('mongoose');
-// Connect to mongodb
+const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/AdAPI', { useNewUrlParser: true});
+// connect to our database
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/StudentAPI'
 
-mongoose.connection.once('open',()=>{
-	console.log('connection has made been made!')
-}).on('error',()=> {
-	console.log('error!')
-})
+//mongoose.connect('mongodb://localhost:27017/StudentAPI', { useNewUrlParser: true});
+mongoose.connect(mongoURI, { useNewUrlParser: true});
+
+module.exports = { mongoose }

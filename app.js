@@ -3,23 +3,29 @@ const express = require('express')
 const port = process.env.PORT || 3000
 const bodyParser = require('body-parser') // middleware for parsing HTTP body
 const { ObjectID } = require('mongodb')
+const cors  = require('cors')
 
 const { mongoose } = require('./db/mongoose')
 
 // import the models
 const { Ad } = require('./models/ad')
+const { User } = require('./models/user')
+
 const app = express();
 app.use(express.static(__dirname + '/pub'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true }))
+app.use(cors())
 
 
 
 app.get('/', (req, res) => {
+	res.sendFile(__dirname + '/views/index.html')
 	
 })
 
 app.get('/signin', (req, res) => {
+	
 
 })  
 app.get('/register', (req, res) => {
@@ -51,12 +57,12 @@ app.post('/ads',(req, res)=> {
 		title: req.body.title,
 		price: req.body.price,
 		type: req.body.type,
-        class_code: req.body.class_code 
+        location: req.body.location 
 	})
 
 	// Save advertisement to the database
 	Advert.save().then((result) => {
-		res.send(result)
+		res.redirect('/')
 	}, (error) => {
 		res.status(400).send(error) // 400 for bad request
 	})
@@ -116,6 +122,105 @@ app.delete('/ads/:id',(req,res)=>{
     }
 	})
 })
+////// --end of routes for ads ----/// 
+////// start route for users ----////
+/** User routes **/
+
+
+//
+// User login and logout routes
+
+app.post('/users/login', (req, res) => {
+	const username = req.body.username
+	const password = req.body.password
+
+	User.findByEmailPassword(username, password).then((user) => {
+		if(!user) {
+			res.redirect('/signin')
+		} else {
+			// Add the user to the session cookie that we will
+			// send to the client
+			req.session.user = user._id;
+			req.session.email = user.email
+			res.redirect('/dashboard')
+		}
+	}).catch((error) => {
+		res.status(400).redirect('/login')
+	})
+})
+
+app.get('/users/logout', (req, res) => {
+	req.session.destroy((error) => {
+		if (error) {
+			res.status(500).send(error)
+		} else {
+			res.redirect('/')
+		}
+	})
+})
+
+
+// Middleware for authentication for resources
+const authenticate = (req, res, next) => {
+	if (req.session.user) {
+		User.findById(req.session.user).then((user) => {
+			if (!user) {
+				return Promise.reject()
+			} else {
+				req.user = user
+				next()
+			}
+		}).catch((error) => {
+			res.redirect('/login')
+		})
+	} else {
+		res.redirect('/login')
+	}
+}
+
+
+
+
+
+
+
+
+// add New User
+app.post('/users', (req, res) => {
+
+	// Create a new user
+	const user = new User({
+		username: req.body.username,
+		password: req.body.password
+	})
+
+	// save user to database
+	user.save().then((result) => {
+		res.send(user)
+	}, (error) => {
+		res.status(400).send(error) // 400 for bad request
+	})
+
+})
+// delete user
+app.delete('/users/:id',(req,res)=>{
+// Add code here
+
+	// get paramters from body of request
+	const id = req.params.id;
+			
+	if (!ObjectID.isValid(id)) {
+		return res.status(404).send();
+	} 
+	User.findOneAndDelete({_id: req.params.id}, req.body, function(err,data)
+	{
+    if(!err){
+        console.log("Deleted");
+        res.send(data)
+    }
+	})
+})
+
 
 	
 

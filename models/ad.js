@@ -20,7 +20,7 @@ const Ad = mongoose.model('Ad', {
 	},
 	location:{
 		type: String,
-		required: true,
+		required: false,
 	}
 	
 })
