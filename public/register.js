@@ -38,8 +38,7 @@ function addUserDb(e) {
 
   				//now do correct server call to add user to database using fetch Call
 
-  				log('email and password set!')
-
+  				
 
 
   			}
