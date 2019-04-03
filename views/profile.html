@@ -3,29 +3,41 @@
  <head>
  	<meta charset="utf-8">
     <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../public/styles/profile.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="icon" href="../public/images/icon.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
  </head>
  <body>
- 	<!-- Top navigation bar -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./index.html">U of T Flea Market</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./signin.html">Sign In</a></li>
-                        <li><a href="./post.html">Post An Ad</a></li>
-                        <li><a href="./profile.html">My Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+   <nav class="navbar navbar-default">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <a class="navbar-brand" href="index.html">ACUARELA</a>
+           </div>
+           <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                   <li>
+                       <div class="search-bar">
+                         <input type="text" class="search-input" placeholder="Search...">
+                         <button class="search-go" type="submit"><i class="fa fa-search"></i></button>
+                       </div>
+                   </li>
+                   <li><a class="profile"><i class="far fa-user"></i>
+                       <span class="tooltip">My Profile</span></a>
+                   </li>
+                   <li><a href="signin.html">Sign In</a></li>
+                   <li><a class="post" href="./post.html">Post Ad</a></li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+   <div class="cover">
+     <h1>My Profile <a href="#userPic">>>></a></h1>
+ </div>
  	<div id='main'>
  		<div id='leftSideBar'>
 	 		<div id='picContainer'>
-	 			<img id='userPic' src="pic.png">
+	 			<img id='userPic' src="../public/images/pic.png">
 	 		</div>
 			<span id='userName'>User Name</span>
 	 		<div id='contact'>
@@ -37,12 +49,12 @@
 	 		</div>
  		</div>
 	 	<div id='adsContainer'>
-	 		<div id='adHeader'>Ads</div>
+	 		<div id='adHeader'>My Ads</div>
 	 		<hr>
 	 		<div id='adList'>
 	 			<div class='adItem'>
 	 				<div class='thumbContainer'>
-	 					<img class='adThumbnail' src="adThumbnail.jpg">
+	 					<img class='adThumbnail' src="../public/images/adThumbnail.jpg">
 	 				</div>
 	 				<div class='adDetails'>
 	 					<span class='adTitle'>TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE </span>
@@ -51,12 +63,12 @@
 		 				<br>
 		 				<span class='adDesc'>ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION </span>
 	 				</div>
-	 				
+
 	 			</div>
 	 		</div>
 	 	</div>
  	</div>
- 	
+
 <!--
 Profile pic
 Username
@@ -64,6 +76,6 @@ Contact details
 Their ads
 -->
 
- 	<script type="text/javascript" src="../public/profile.js"></script>
+ 	<script type="text/javascript" src="profile.js"></script>
  </body>
 </html>
