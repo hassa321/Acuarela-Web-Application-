@@ -46,7 +46,12 @@ document.addEventListener("DOMContentLoaded", function() {
      thumbnail = document.createElement('div')
     thumbnail.classList.add('thumbnail');
      img = document.createElement('img')
-    img.src="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"
+     if(data[i].type==="Textbook"){img.src="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
+      if (data[i].type==="iClicker"){img.src="../public/images/iClickers.jpg"}
+      if(data[i].type==="Electronics"){img.src="../public/images/Electronics.jpg"}
+      if(data[i].type==="Course Notes"){img.src="../public/images/notes.jpg"}
+        if(data[i].type==="Calculator"){img.src="../public/images/Calculators.jpg"}
+          if(data[i].type==="Others"){img.src="../public/images/others.png"}
      caption = document.createElement('div')
     caption.classList.add('caption')
      h4 = document.createElement('h4')
