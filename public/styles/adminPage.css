@@ -1,4 +1,4 @@
-.navBar {
+/*.navBar {
 	background-color: rgb(235, 235, 235);
 	color: grey;
 	text-align: center;
@@ -7,9 +7,6 @@
 
 
 
-}
-body{
-  background-image: url("../images/bgd.jpg");
 }
 
 .navBar li {
@@ -24,51 +21,179 @@ color:black;
 
 .navBar li a:hover{
 	color: white;
+}*/
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+}
+.cover {
+  background-image: url("../images/bgd.jpg");
+	height: 500px;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+  margin: -20px 0 0 0;
+}
+h1 {
+  font-size: 20px;
+  position: absolute;
+  top: 200px;
+  left: 40%;
+}
+h1 a {
+  cursor: pointer;
+  color: #fff;
+}
+h1 a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+h2 {
+  font-size: 20px;
+  position: absolute;
+  top: 220px;
+  left: 40%;
+}
+h2 a {
+  cursor: pointer;
+  color: #fff;
+}
+h2 a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.navbar-brand {
+  font-size: 15px;
+  cursor: pointer;
 }
 
+.search-bar {
+	border: 1px solid;
+	border-color: #fff;
+	border-radius: 15px;
+	width: 300px;
+	height: 32px;
+  margin: 8px 10px 0 0;
+}
 
-#tableRows{
-	padding-right: 100px;
+.search-input {
+	color: #fff;
+	border: none;
+	width: 250px;
+	height: 30px;
+	font-weight: 100;
+	font-size: 15px;
+	background-color: transparent;
+	outline: none;
+  margin: 0 0 0 10px;
 }
-.tableColumns{
-	text-align: center;
+
+.search-go {
+	width: 20px;
+	height: 20px;
+	border: none;
+	color: #fff;
+	background-color: transparent;
+	font-weight: 100;
+	font-size: 18px;
+	float: right;
+	outline: none;
+  margin: 4px 10px 0 0;
 }
-#userTable{
-	padding-top: 15px;
+.profile {
+  cursor: pointer;
+  margin: 2px 0 0 0;
 }
-#adTable{
-	padding-top: 100px;
+.profile .tooltip {
+  visibility: hidden;
+	width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-top: 60px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+	font-size: 12px;
 }
+.profile:hover .tooltip {
+  visibility: visible;
+}
+
+button {
+  color: #183048;
+  border: 1px solid #183048;
+  font-size: 14px;
+  font-weight: 100;
+  width: 60px;
+  height: 30px;
+  border-radius: 6px;
+}
+button:hover {
+  border: 2px solid;
+}
+.unbanned{
+  color: green;
+}
+.banned {
+  color: red;
+  display: none;
+  /*display: none;*/
+}
+.unban-btn {
+  display: none;
+  /*display: none;*/
+}
+
+.shown {
+  color: black;
+}
+.closed {
+  color: #777777;
+  display: none;
+  /*display: none;*/
+}
+.show-btn {
+  display: none;
+  /*display: none;*/
+}
+
 table{
-	
 	border-collapse: collapse;
 	width: 90%;
-
+  margin: 20px 0 20px 80px;
 }
-#tbody th{
-	border-bottom: 2px solid black;
-	color: #816212;
+th{
+	border-bottom: 2px solid #183048;
+	color: #183048;
 	font-size: 20px;
-
+  text-align: center;
 }
 
 td{
-	padding-top: 20px;
-	padding-bottom: 20px;
-/*	border: 2px solid black;
-*/
-	border-bottom: 1px solid black;
-
+  font-size: 15px;
+  width: 200px;
+  padding: 10px 0 10px 0;
+	border-bottom: 1px solid #183048;
+  text-align: center;
 }
-
-#tbody2 th{
-	border-bottom: 2px solid black;
-	color: black;
-	font-size: 20px;
-
+.bottom {
+  margin: 50px 22% 0 22%;
+  width: 800px;
+  height: 100px;
+  text-align: center;
+  color: #777777;
+  border-top: 1px solid black;
 }
-
-#main h1{
+/*#main h1{
 color: grey
 }
 #main {
@@ -79,26 +204,4 @@ color: grey
 
 #main h1:hover{
 	color: white	;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/

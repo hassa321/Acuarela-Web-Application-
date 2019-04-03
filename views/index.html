@@ -1,45 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Listings</title>
+        <title>Home</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">         -->
-        <link rel="stylesheet" href="../public/styles/index.css">    
-    </head>
+        <link rel="stylesheet" href="../public/styles/index.css">
+        <link rel="icon" href="../public/images/icon.jpg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      </head>
     <body>
         <!-- Top navigation bar -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand">U of T Flea Market</a>
+                    <a class="navbar-brand" href="index.html">ACUARELA</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="search-bar">
+                              <input type="text" class="search-input" placeholder="Search...">
+                              <button class="search-go" type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </li>
+                        <li><a class="profile"><i class="far fa-user"></i>
+                            <span class="tooltip">My Profile</span></a>
+                        </li>
                         <li><a href="./signin.html">Sign In</a></li>
-                        <li><a href="./post.html">Post An Ad</a></li>
-                        <li><a href="./profile.html">My Profile</a></li>
+                        <li><a class="post" href="./post.html">Post Ad</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="cover">
+          <h1>Find your Textbooks and Course Materials at Acuarela <a href="#ad-section">>>></a></h1>
+      </div>
 
         <!-- Side navigation bar -->
-        <!-- load classes from user profile or class database-->
+        <!-- load classes from user profile -->
         <div class="sidenav">
-            <a class="classButton" href="#">csc263</a>
-            <a class="classButton" href="#">Class 2</a>
-            <a class="classButton" href="#">Class 3</a>
-            <a class="classButton" href="#">Class 4</a>
-            <a class="classButton" href="#">Class 5</a>
+            <select class="form-control" id="category" onchange="tag()">
+              <option value="" disabled selected style="display:none">Subject Category</option>
+              <option value="">Textbook</option>
+              <option value="">Course Notes</option>
+              <option value="appliance">Electronics</option>
+              <option value="appliance">Stationery</option>
+              <option value="appliance">IClicker</option>
+              <option value="appliance">Calculator</option>
+              <option value="appliance">Others</option>
+            </select>
+            <select class="form-control" id="type">
+              <option value="" disabled selected style="display:none">Ad Type</option>
+              <option value="">Selling</option>
+              <option value="">Swapping/Trading</option>
+              <option value="">Giveaway</option>
+              <option value="">Wanting</option>
+            </select>
+            <select class="form-control" id="type" autofocus>
+              <option value="" disabled selected style="display:none">Condition</option>
+              <option value="">New</option>
+              <option value="">Used - Like New</option>
+              <option value="">Used - Very Good</option>
+              <option value="">Used - Good</option>
+              <option value="">Used - Acceptable</option>
+            </select>
+            <select class="form-control" id="location">
+              <option value="" disabled selected style="display:none">Location</option>
+                <option value="dt">Downtown Toronto</option>
+                <option value="ny">North York</option>
+                <option value="ms">Missisauga</option>
+                <option value="sc">Scarborough</option>
+                <option value="mk">Markham</option>
+                <option value="vh">Vaughan</option>
+                <option value="rh">Richmond Hill</option>
+                <option value="ot">Others</option>
+            </select>
+            <button class="filter-btn" type="submit" onclick="">Filter <i class="fas fa-filter"></i></button><br>
+            <button class="clear-btn" type="submit" onclick="">Clear</button>
         </div>
 
         <!-- posts will be loaded from database, based on the class selected -->
-        <div class="post-container">
-            <!-- <div class="posting csc263">
+        <div class="post-container" id="ad-section">
+            <div class="posting csc263">
                 <div class="thumbnail">
                     <img src = "https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516">
                     <div class="caption">
                         <h4 class="product_title">Introduction to Algorithms (3rd Edition)</h4>
-                        <p>List Price: $100.00</p> 
+                        <p>List Price: $100.00</p>
                         <p>Condition: Good</p>
                     </div>
                 </div>
@@ -50,7 +97,7 @@
                     <img src = "https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516">
                     <div class="caption">
                         <h4 class="product_title">Introduction to Algorithms (3rd Edition)</h4>
-                        <p>List Price: $100.00</p> 
+                        <p>List Price: $100.00</p>
                         <p>Condition: Good</p>
                     </div>
                 </div>
@@ -61,16 +108,15 @@
                     <img src = "https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516">
                     <div class="caption">
                         <h4 class="product_title">Introduction to Algorithms (3rd Edition)</h4>
-                        <p>List Price: $100.00</p> 
+                        <p>List Price: $100.00</p>
                         <p>Condition: Good</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
-        
+        <div class="bottom">Acuarela 2019</div>
 
-        <script src="../public/post_index.js"></script>
+
+        <script src="index.js"></script>
     </body>
 </html>
-
-
