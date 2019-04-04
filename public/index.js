@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     url: "/ads",
     }).done(function(data){
    console.log(data)
-      const d =document.getElementById('location')
+      const d =document.getElementById('abc')
       const b=document.createElement('button')
       d.appendChild(document.createElement('button'))
 
