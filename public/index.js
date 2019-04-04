@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   $.ajax({ 
     method: "get", 
-    url: "http://localhost:3000/ads",
+    url: "/ads",
     
   }).done(function(data){
    console.log(data)
