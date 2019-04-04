@@ -8,7 +8,6 @@
 document.addEventListener("DOMContentLoaded", function() {
    // server call 
   // server call will bring JSON file of ad elemets 
-  var data1;
 
 
     $.ajax({ 
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
    // check if JSON is empty, means there are no ads
     console.log(`Number of Ads:${data.length}`)
 
-    data1=data;
+      const data1 = data
 
     }).fail(function(err){
     
