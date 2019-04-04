@@ -1,7 +1,7 @@
 // const classes = document.querySelectorAll('.classButton');
 // const postings = document.querySelectorAll('.posting');
 
-window.open(window.open('../views/index.html','_self'))
+//window.open(window.open('../views/index.html','_self'))
 
 
 
