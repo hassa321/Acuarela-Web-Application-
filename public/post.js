@@ -12,7 +12,8 @@ function addPostDb(e) {
 	const category = cat.options[cat.selectedIndex].text;
 	const ad = document.querySelector('#type')
 	const type = ad.options[ad.selectedIndex].text;
-	const title = document.querySelector('#title').value
+	var title = document.querySelector('#title').value
+	title ="TESTING!" 
 	const desc = document.querySelector('#description').value
 	const loc = document.querySelector('#location')
 	const location = loc.options[loc.selectedIndex].text;
