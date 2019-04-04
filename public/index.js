@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     caption.appendChild(price)
     console.log(posting)
     console.log(dom)
-    dom.appendChild(posting)
+    $('#ad-section').append(posting);
     
   }
     
