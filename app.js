@@ -24,7 +24,7 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-	
+	res.sendFile(__dirname + '/views/index.html')
 	
 })
 
@@ -77,7 +77,7 @@ app.post('/ads',(req, res)=> {
 app.get('/ads', (req, res) => {
 	// Add code here
 	Ad.find().then((advert) => {
-		res.send(  advert );
+		res.send( advert );
 	}, (error) => {
 		res.status(400).send(error);
 	});
