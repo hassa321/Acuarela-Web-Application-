@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
       d.append(document.createElement('button'))
       
       const div = document.createElement('div')
-      //cont img = document.createElement('img')
+      cont img = document.createElement('img')
       //$(img).attr("src","./../public/images/notes.jpg")
       //d.append(img)
 
