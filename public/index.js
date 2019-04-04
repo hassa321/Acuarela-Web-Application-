@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const d =document.getElementById("abc")
       d.innerHTML='123ab'
       d.style.visibility="visible"
-      d.append(document.createElement('button'))
+      //d.append(document.createElement('button'))
       
       const div = document.createElement('div')
       cont img = document.createElement('img')
