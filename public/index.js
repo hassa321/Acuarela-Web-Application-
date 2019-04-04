@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }).done(function(data){
    console.log(data)
       const d =document.getElementById("abcd")
-      d.innerHTML='abc'
+      d.innerHTML='123ab'
+      d.appendChild(document.createElement('button'))
    //server call brings all ads in JSON file
    // check if JSON is empty, means there are no ads
     console.log(`Number of Ads:${data.length}`)
