@@ -73,11 +73,12 @@ document.addEventListener("DOMContentLoaded", function() {
     thumbnail.appendChild(caption)
     caption.appendChild(h4)
     caption.appendChild(price)
+    console.log('appending here')
     dom.appendChild(posting)
     console.log(posting)
     console.log(dom)
     
-    
+  
   }
     
     
