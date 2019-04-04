@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let i = 0;i<data.length;i++){
     //create ALL dom Elements first
+    console.log(i)
      posting = document.createElement('div')
     posting.classList.add('posting');
      thumbnail = document.createElement('div')
