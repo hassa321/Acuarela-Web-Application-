@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var caption;
     var h4;
     var h4text;
+    var type;
     var price;
     var priceNumber;
     const d =document.getElementById("abc")
@@ -24,11 +25,18 @@ document.addEventListener("DOMContentLoaded", function() {
       for(var i = 0; i<data.length;i++){
 
         price = data[i].price
-        title = data[i].price
+        title = data[i].title
+        var type = data[i].type
+        if(data[i].type==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
+        if (data[i].type==="iClicker"){img="../public/images/iClickers.jpg"}
+        if(data[i].type==="Electronics"){img="../public/images/Electronics.jpg"}
+        if(data[i].type==="Course Notes"){img="../public/images/notes.jpg"}
+          if(data[i].type==="Calculator"){img="../public/images/Calculators.jpg"}
+            if(data[i].type==="Others"){img="../public/images/others.png"}
 
       $("<div>", {class: "posting"}).append(
         $("<div>", {class: "thumbnail"}).append(
-            $("<img>",{src:"../public/images/notes.jpg"}),
+            $("<img>",{src:img}),
             $("<div", {class:"caption"}).append(
             )
             
