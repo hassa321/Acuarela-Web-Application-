@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     url: "/ads",
     }).done(function(data){
    console.log(data)
-      const d =document.getElementById("abcd")
+      const d =document.getElementById("ad-section")
       d.innerHTML='123ab'
       d.appendChild(document.createElement('button'))
    //server call brings all ads in JSON file
