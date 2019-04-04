@@ -24,8 +24,7 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-	console.log('Here')
-	res.sendFile(__dirname + '/views/index.html')
+	
 	
 })
 
