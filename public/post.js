@@ -45,7 +45,7 @@ function addPostDb(e) {
 			location: location
 		}
 	}).done(function(data){
-		window.open('../public/index.html','_self')
+		window.open('../views/index.html','_self')
 		console.log('Success!')
 	}).fail(function(err){
 		
