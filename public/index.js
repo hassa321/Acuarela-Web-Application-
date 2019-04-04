@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
       d.style.visibility="visible"
       d.append(document.createElement('button'))
       
-      //const div = document.createElement('div')
+      const div = document.createElement('div')
       //cont img = document.createElement('img')
       //$(img).attr("src","./../public/images/notes.jpg")
       //d.append(img)
