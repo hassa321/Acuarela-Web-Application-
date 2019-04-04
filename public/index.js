@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // do everything here.
     
   console.log('LOADED!!')
-  var dom = document.getElementById("ad-section")
+  const dom = document.getElementById("ad-section")
   var varray
   var posting;
   var thumbnail;
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
   caption.appendChild(h4)
   caption.appendChild(price)
   console.log('appending here')
-  varray.append(posting)
+  dom.append(posting)
   console.log(posting)
   console.log(dom)
 
