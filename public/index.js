@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const div = document.createElement('div')
       cont img = document.createElement('img')
       $(img).attr("src","./../public/images/notes.jpg")
-      div.append(img)
-      d.append(d)
+      d.append(img)
 
    //server call brings all ads in JSON file
    // check if JSON is empty, means there are no ads
