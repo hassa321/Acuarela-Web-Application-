@@ -66,7 +66,6 @@ app.post('/ads',(req, res)=> {
 
 	// Save advertisement to the database
 	Advert.save().then((result) => {
-		res.redirect('/')
 	}, (error) => {
 		res.status(400).send(error) // 400 for bad request
 	})
