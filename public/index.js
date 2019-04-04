@@ -15,17 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
     url: "/ads",
     }).done(function(data){
    console.log(data)
-   const b = document.getElementById('abcd')
-   b.innerHTML()='alkafjk'
-      const d =document.getElementById('abc')
-      const b=document.createElement('button')
-      d.appendChild(document.createElement('button'))
-
+      const d =document.getElementById("abcd")
+      d.innerHTML='abc'
    //server call brings all ads in JSON file
    // check if JSON is empty, means there are no ads
     console.log(`Number of Ads:${data.length}`)
-
-      const data1 = data
 
     }).fail(function(err){
     
@@ -35,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // do everything here.
     
   console.log('LOADED!!')
-});
+  
+  });
 
 
