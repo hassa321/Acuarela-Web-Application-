@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    console.log(data[0])  
+    console.log(`array of ads${data}`)  
     const dom = document.getElementById("ad-section")
     var posting;
     var thumbnail;
