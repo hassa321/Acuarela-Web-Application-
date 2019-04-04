@@ -36,7 +36,7 @@ function addPostDb(e) {
 
 	$.ajax({ 
 		method: "post", 
-		url: "http://localhost:3000/ads",
+		url: "/ads",
 		data: { 
 			title: title,
 			price: price,
