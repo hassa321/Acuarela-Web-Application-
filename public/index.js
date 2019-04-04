@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   console.log('LOADED!!')
     const h = document.getElementById('header1')
-    h.innerHTML('ASdasdasd  ')
+    h.innerHTML= 'ASdasdasd  '
 
   });
 
