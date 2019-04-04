@@ -43,26 +43,26 @@ document.addEventListener("DOMContentLoaded", function() {
   var priceNumber;
 
 
-  for (let i = 0;i<data.length;i++){
+  for (let i = 0;i<data1.length;i++){
   //create ALL dom Elements first
    posting = document.createElement('div')
   posting.classList.add('posting');
    thumbnail = document.createElement('div')
   thumbnail.classList.add('thumbnail');
    img = document.createElement('img')
-   if(data[i].type==="Textbook"){img.src="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
-    if (data[i].type==="iClicker"){img.src="../public/images/iClickers.jpg"}
-    if(data[i].type==="Electronics"){img.src="../public/images/Electronics.jpg"}
-    if(data[i].type==="Course Notes"){img.src="../public/images/notes.jpg"}
-      if(data[i].type==="Calculator"){img.src="../public/images/Calculators.jpg"}
-        if(data[i].type==="Others"){img.src="../public/images/others.png"}
+   if(data1[i].type==="Textbook"){img.src="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
+    if (data1[i].type==="iClicker"){img.src="../public/images/iClickers.jpg"}
+    if(data1[i].type==="Electronics"){img.src="../public/images/Electronics.jpg"}
+    if(data1[i].type==="Course Notes"){img.src="../public/images/notes.jpg"}
+      if(data1[i].type==="Calculator"){img.src="../public/images/Calculators.jpg"}
+        if(data1[i].type==="Others"){img.src="../public/images/others.png"}
    caption = document.createElement('div')
   caption.classList.add('caption')
    h4 = document.createElement('h4')
-   h4text = document.createTextNode(data[i].title)
+   h4text = document.createTextNode(data1[i].title)
   h4.appendChild(h4text)
    price = document.createElement('p')
-   priceNumber = document.createTextNode(`List Price: ${data[i].price}`)
+   priceNumber = document.createTextNode(`List Price: ${data1[i].price}`)
   price.appendChild(priceNumber)
   
   
