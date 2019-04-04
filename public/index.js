@@ -45,19 +45,19 @@ document.addEventListener("DOMContentLoaded", function() {
     caption.classList.add('caption')
      h4 = document.createElement('h4')
      h4text = document.createTextNode(data[i].title)
-    h4.appendChild(h4text)
+    h4.append(h4text)
      price = document.createElement('p')
      priceNumber = document.createTextNode(`List Price: ${data[i].price}`)
-    price.appendChild(priceNumber)
+    price.append(priceNumber)
     
     
     
     
-    posting.appendChild(thumbnail)
-    thumbnail.appendChild(img)
-    thumbnail.appendChild(caption)
-    caption.appendChild(h4)
-    caption.appendChild(price)
+    posting.append(thumbnail)
+    thumbnail.append(img)
+    thumbnail.append(caption)
+    caption.append(h4)
+    caption.append(price)
 
     d.append(posting)
    //server call brings all ads in JSON file
