@@ -16,26 +16,32 @@ document.addEventListener("DOMContentLoaded", function() {
     var h4text;
     var price;
     var priceNumber;
-
+    const d =document.getElementById("abc")
     $.ajax({ 
     method: "get", 
     url: "/ads",
     }).done(function(data){
-   console.log(data)
-      const d =document.getElementById("abc")
-      d.innerHTML='123ab'
-      d.style.visibility="visible"
-      d.append(document.createElement('button'))
-      
-      const div = document.createElement('div')
-      cont img = document.createElement('img')
-      //$(img).attr("src","./../public/images/notes.jpg")
-      //d.append(img)
+      for(var i = 0; i<data.length;i++){
 
-   //server call brings all ads in JSON file
-   // check if JSON is empty, means there are no ads
-    console.log(`Number of Ads:${data.length}`)
+        price = data[i].price
+        title = data[i].price
 
+      $("<div>", {class: "posting"}).append(
+        $("<div>", {class: "thumbnail"}).append(
+            $("<img>",{src:"../public/images/notes.jpg"}),
+            $("<div", {class:"caption"}).append(
+            )
+            
+        ), 
+        $("<div>", {class: "inner"}).append(
+            $("<h4>",{class: "product_title"}).text(
+                title
+            )
+        ,$("<h4>",{class: ""}).text(
+          price
+      ))
+    ).appendTo(d)
+            }
     }).fail(function(err){
     
     console.log("ERROR HEr1!")
