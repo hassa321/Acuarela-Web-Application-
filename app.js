@@ -5,7 +5,7 @@ const bodyParser = require('body-parser') // middleware for parsing HTTP body
 const { ObjectID } = require('mongodb')
 const cors  = require('cors')
 var http=require('http');
-var server = http.Server(app)
+
 
 
 const { mongoose } = require('./db/mongoose')
@@ -15,6 +15,7 @@ const { Ad } = require('./models/ad')
 const { User } = require('./models/user')
 
 const app = express();
+var server = http.Server(app)
 app.use(express.static(__dirname + '/pub'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true }))
