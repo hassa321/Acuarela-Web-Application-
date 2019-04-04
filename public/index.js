@@ -1,3 +1,5 @@
+import { ENETUNREACH } from "constants";
+
 // const classes = document.querySelectorAll('.classButton');
 // const postings = document.querySelectorAll('.posting');
 
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   var data;
+
 
   $.ajax({ 
     method: "get", 
@@ -32,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     console.log(`array of ads${data}`)  
-    const dom = document.getElementById("ad-section")
+    var dom = document.getElementById("ad-section")
+    var varray
     var posting;
     var thumbnail;
     var img;
@@ -74,20 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
     caption.appendChild(h4)
     caption.appendChild(price)
     console.log('appending here')
-    dom.appendChild(posting)
+    varray.append(posting)
     console.log(posting)
     console.log(dom)
+
+    }
     
-  
-  }
-    
-    
-
-
-
-
-
-
 
 
 
@@ -96,7 +92,12 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("ERROR HEr1!")
   });
 
-
+  $(document).ajaxSuccess(function() {
+    for(const x=0;x<varray.length;x++){
+      dom.append(varray[x]);
+    }
+  });
+  
 
 console.log('LOADED!!')
 
