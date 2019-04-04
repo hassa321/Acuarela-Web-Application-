@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
       d.innerHTML='123ab'
       d.style.visibility="visible"
       d.append(document.createElement('button'))
+      
+      const div = document.createElement('div')
+      cont img = document.createElement('img')
+      $(img).attr("src","./../public/images/notes.jpg")
+      div.append(img)
+      d.append(d)
+
    //server call brings all ads in JSON file
    // check if JSON is empty, means there are no ads
     console.log(`Number of Ads:${data.length}`)
