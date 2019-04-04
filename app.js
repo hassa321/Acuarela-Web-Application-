@@ -4,6 +4,9 @@ const port = process.env.PORT || 3000
 const bodyParser = require('body-parser') // middleware for parsing HTTP body
 const { ObjectID } = require('mongodb')
 const cors  = require('cors')
+var http=require('http');
+var server = http.Server(app)
+
 
 const { mongoose } = require('./db/mongoose')
 
