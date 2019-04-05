@@ -43,9 +43,7 @@ h1 a:hover{
 	height: 32px;
   margin: 8px 10px 0 0;
 }
-
 .search-input {
-	color: #fff;
 	border: none;
 	width: 250px;
 	height: 30px;
@@ -55,7 +53,6 @@ h1 a:hover{
 	outline: none;
   margin: 0 0 0 10px;
 }
-
 .search-go {
 	width: 20px;
 	height: 20px;
@@ -90,16 +87,182 @@ h1 a:hover{
   visibility: visible;
 }
 
-h3 {
-	font-family: inherit;
-	font-size: 16.5pt;
-	margin-top: 0px;
-	margin-bottom: 13px;
+.profile-info {
+    width: 250px;
+    position: absolute;
+    top: 500px; /* Stay at the top */
+    left: 50px;
+  	border: 1px solid #183048;
+		color: #183048;
+    border-radius: 16px;
+		padding: 20px;
+		margin: 0 0 30px 0;
+		font-size: 18px;
+}
+.profile-info label {
+	display: none;
+}
+.contact-info {
+	font-size: 16px;
+	border-top: 1px solid #183048;
+	width: 200px;
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 0;
+}
+h2 {
+	font-size: 30px;
+}
+h2 i {
+	margin: 0 0 0 20px;
+	font-size: 20px;
+	color: blue;
+}
+.setting {
+	display: none;
+}
+.setting button {
+	border-radius: 10px;
+	font-size: 16px;
+	height: 30px;
+	margin: 0 10px 0 0;
+}
+.save-btn {
+	background-color: #183048;
+	color: #fff;
+	border: 1px solid #183048;
+	width: 70px;
+}
+.save-btn:hover {
+	opacity: .8;
+}
+.cancel-btn {
+	background-color: #fff;
+	border: 1px solid #183048;
+	color: #183048;
+	width: 80px;
+}
+.cancel-btn:hover {
+	border: 2px solid #183048;
+}
+.setting-btn{
+	background-color: #183048;
+	color: #fff;
+	border-radius: 10px;
+	width: 45px;
+	height: 30px;
+	margin: 10px 0 0 0;
+}
+.setting input {
+	border: 1px solid #183048;
+	border-radius: 5px;
+	margin: 0 0 20px 0;
+	height: 30px;
+	width: 200px;
+}
+.setting-name {
+	width: 200px;
+}
+#firstname {
+	width: 80px;
+	float: left;
+}
+#lastname {
+	width: 80px;
+	float: right;
 }
 
+.setting select {
+	border: 1px solid #183048;
+	border-radius: 5px;
+	margin: 0 0 20px 0;
+	height: 30px;
+	width: 200px;
+}
 
+.profile-ad-container{
+	margin: 20px 0 0 350px;
+	border-radius: 10px;
+}
+.profile-ad {
+	border: 1px solid #183048;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px 0 0 0;
+	width: 800px;
+	min-height: 200px;
+	color: #183048;
+	overflow: hidden;
+	cursor: pointer;
+}
 
-#main {
+.profile-ad-img {
+	width: 160px;
+	height: 160px;
+	border: 1px solid black;
+	border-radius: 8px;
+	float: left;
+	margin: 0 20px 0 0;
+	display: inline-block;
+}
+.profile-ad-preview {
+	margin: -10px 0 0 20px;
+	width: 550px;
+	display: inline-block;
+	overflow: hidden;
+}
+.profile-ad-title:hover {
+	text-decoration: underline;
+}
+.profile-ad-intro {
+	font-size: 18px;
+}
+.profile-ad-desc {
+	font-size: 16px;
+	width: 550px;
+	color: black;
+}
+.profile-ad:hover {
+	background-color: #ddd;
+	opacity: .8;
+}
+.search-my-ads {
+	border: 1px solid #183048;
+	border-radius: 10px;
+	width: 500px;
+	height: 40px;
+  margin: 8px 10px 0 0;
+}
+.search-my-ads-input{
+	border: none;
+	width: 450px;
+	height: 36px;
+	font-weight: 100;
+	font-size: 18px;
+	background-color: transparent;
+	outline: none;
+  margin: 0 0 0 10px;
+}
+.search-my-ads-go {
+	width: 20px;
+	height: 20px;
+	border: none;
+	background-color: transparent;
+	font-weight: 100;
+	font-size: 20px;
+	float: right;
+	outline: none;
+  margin: 4px 15px 0 0;
+	color: #183048;
+}
+.bottom {
+	margin: 50px 22% 0 22%;
+	width: 800px;
+	height: 100px;
+	text-align: center;
+	color: #777777;
+	border-top: 1px solid black;
+}
+/*#main {
 	margin-left: auto;
 	padding-top: 30px;
 	width: 90%;
@@ -214,7 +377,7 @@ h3 {
 	max-height: 86px;
 
 }
-/*.bottom {
+.bottom {
   margin: 50px 22% 0 22%;
   width: 800px;
   height: 100px;
