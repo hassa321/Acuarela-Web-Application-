@@ -33,49 +33,74 @@
    </nav>
    <div class="cover">
      <h1>My Profile <a href="#userPic">>>></a></h1>
- </div>
- 	<div id='main'>
- 		<div id='leftSideBar'>
-	 		<div id='picContainer'>
-	 			<img id='userPic' src="../public/images/pic.png">
-	 		</div>
-			<span id='userName'>User Name</span>
-	 		<div id='contact'>
-	 			<span id='contactHeader'>Contact </span>
-	 			<hr>
-	 			<h3>Email: </h3><span class='contactInfo' id='email'> username@email.com</span>
-	 			<br>
-	 			<h3>Phone: </h3><span class='contactInfo' id='phone'> +1 (647) 464-8861 </span>
-	 		</div>
- 		</div>
-	 	<div id='adsContainer'>
-	 		<div id='adHeader'>My Ads</div>
-	 		<hr>
-	 		<div id='adList'>
-	 			<div class='adItem'>
-	 				<div class='thumbContainer'>
-	 					<img class='adThumbnail' src="../public/images/adThumbnail.jpg">
-	 				</div>
-	 				<div class='adDetails'>
-	 					<span class='adTitle'>TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE </span>
-		 				<br>
-		 				<span class='adPrice'>$##.##</span>
-		 				<br>
-		 				<span class='adDesc'>ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION ITEM DESCRIPTION </span>
-	 				</div>
+   </div>
 
-	 			</div>
-	 		</div>
-	 	</div>
- 	</div>
+   <div class="profile-info">
+     <div id="profileInfo" class="profile-info-display">
+       <h2>Username<i class="fas fa-male"></i></h2>
+       <span class="campus"><label>Campus: </label><span id="campus">UofT St.George</span></span>
+       <div class="contact-info">
+         <span class="name"><label>Name: </label><span>Jack Ma</span></span><br>
+         <span class="email"><label>Email: </label><span>no1richman@alibaba.com</span></span><br>
+         <span class="phone"><label>Phone: </label><span>(888) 888-8888</span></span><br>
+         <button class="setting-btn" onclick="editProfile()"><i class="fas fa-user-cog"></i></button>
+       </div>
+     </div>
+       <form id="settingChange" class="setting" method="post">
+         <div class="setting-name">
+           <input id="firstname" type="firstname" placeholder="Firstname" value="Jack" required autofocus>
+           <input id="lastname" type="lastname" placeholder="Lastname" value="Ma" required autofocus>
+        </div>
+        <input type="username" placeholder="Username" value="No.1RichMan" required autofocus><br>
+        <input type="password" placeholder="Password" value="password" onchange="" required autofocus><br>
+        <input type="password" placeholder="Confirm your password" value="password" autofocus><br>
+        <select type="gender" id="gender" class="" required autofocus>
+            <option value="" disabled selected style="display: none;">I am...</option>
+            <option value="Female">Female</option>
+            <option value="Male" selected>Male</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <input type="phone" id="phone" class="" placeholder="Phone" value="8888888888"><br>
+        <input type="email" id="email" class="" placeholder="Email" value="no1richman@alibaba.com" disabled required autofocus><br>
+        <select type=""  id="campus" class="" >
+            <option value="" disabled selected style="display: none;"></option>
+            <option selected>UofT St.George</option>
+            <option>UofT Missisauga</option>
+            <option>UofT Scarborough</option>
+            <option>Other</option>
+        </select><br>
+         <button class="save-btn">Save</button>
+         <button class="cancel-btn">Cancel</button>
+       </form>
+   </div>
+   <div class="profile-ad-container">
+     <div class="search-my-ads">
+       <input type="text" class="search-my-ads-input" placeholder="Search My Ads">
+       <button class="search-my-ads-go" type="submit"><i class="fa fa-search"></i></button>
+     </div>
 
-<!--
-Profile pic
-Username
-Contact details
-Their ads
--->
+     <div class="profile-ad">
+       <div id="profile-ad-img" class="profile-ad-img">img</div>
+       <div id="profile-ad-preview" class="profile-ad-preview">
+         <h3 class="profile-ad-title">Introduction to Algorithms(3rd Edition)</h3>
+         <span class="profile-ad-intro"><span class="profile-ad-type">Selling&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp</span><span class="profile-ad-condition">Used - Good&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp</span><span class="profile-ad-price">$100</span></span><br>
+         <p class="profile-ad-desc">Selling my favourate textbook, so pay at least 100 dollar to get it or I will eat the book</p>
+       </div>
+     </div>
 
- 	<script type="text/javascript" src="profile.js"></script>
+     <div class="profile-ad">
+       <div id="profile-ad-img" class="profile-ad-img">img</div>
+       <div id="profile-ad-preview" class="profile-ad-preview">
+         <h3 class="profile-ad-title">Introduction to Algorithms(4rd Edition)</h3>
+         <span class="profile-ad-intro"><span class="profile-ad-type">Selling&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp</span><span class="profile-ad-condition">Used - Good&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp</span><span class="profile-ad-price">$400</span></span><br>
+         <p class="profile-ad-desc">Selling another my favourate textbook, so pay at least 400 dollar to get it or I will eat the book againppppppppppppppppppp ppppppppppppppppppppp  ppaaaskjfhalskfhs lkfhslkfhskljfhaslkjfhaslkjf hasjlfhajhfasljkf</p>
+       </div>
+     </div>
+
+   </div>
+   <div class="bottom">Acuarela 2019</div>
+
+
+ 	<script type="text/javascript" src="../public/profile.js"></script>
  </body>
 </html>
