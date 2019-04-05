@@ -11,7 +11,12 @@ const adDetails = document.querySelector('#adDetails');
 const adDesc = document.querySelector('#adDesc');
 
 
-
+function editProfile() {
+	var profileInfo = document.getElementById('profileInfo')
+	var settingChange = document.getElementById('settingChange')
+	profileInfo.style.display = "none"
+	settingChange.style.display = "inline"
+}
 
 function loadAds()
 {
@@ -60,7 +65,7 @@ function getAds()
 		newItem.appendChild(adPicContainer);
 		newItem.appendChild(details);
 		adPicContainer.appendChild(adPic);
-		
+
 		ads[i] = newItem;
 
 	}
