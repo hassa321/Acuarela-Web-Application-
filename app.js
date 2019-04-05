@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signin', (req, res) => {
+	console.log('sadasd')
 	res.sendFile(__dirname + '/views/signin.html')
 
 })  
@@ -135,22 +136,27 @@ app.delete('/ads/:id',(req,res)=>{
 //
 // User login and logout routes
 
-app.post('/users/login', (req, res) => {
+app.post('/users/signin', (req, res) => {
 	const username = req.body.username
+	console.log(`username${username}`)
+	
 	const password = req.body.password
-	console.log('here')
+	console.log(`password${password}`)
+	
 	User.findByEmailPassword(username, password).then((user) => {
 		if(!user) {
+
 			res.redirect('/signin')
 		} else {
 			// Add the user to the session cookie that we will
 			// send to the client
 			req.session.user = user._id;
 			req.session.email = user.email
-			res.redirect('/signin')
+			res.redirect('/')
 		}
 	}).catch((error) => {
-		res.status(400).redirect('/login')
+		console.log('abs')
+		res.status(400).redirect('/signin')
 	})
 })
 

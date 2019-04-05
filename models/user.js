@@ -24,13 +24,17 @@ UserSchema.statics.findByEmailPassword = function(username, password) {
 	const User = this
 
 	return User.findOne({username: username}).then((user) => {
+		console.log("gets to models")
 		if (!user) {
+			console.log("error here")
+			console.log(Promise.reject())
 			return Promise.reject()
 		}
 
 		return new Promise((resolve, reject) => {
 			bcrypt.compare(password, user.password, (error, result) => {
 				if (result) {
+					log('HEREHEHRE')
 					resolve(user);
 				} else {
 					reject();
