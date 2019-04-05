@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signin', (req, res) => {
-	
+	res.sendFile(__dirname + '/views/signin.html')
 
 })  
 app.get('/register', (req, res) => {
@@ -138,7 +138,7 @@ app.delete('/ads/:id',(req,res)=>{
 app.post('/users/login', (req, res) => {
 	const username = req.body.username
 	const password = req.body.password
-
+	console.log('here')
 	User.findByEmailPassword(username, password).then((user) => {
 		if(!user) {
 			res.redirect('/signin')
@@ -147,7 +147,7 @@ app.post('/users/login', (req, res) => {
 			// send to the client
 			req.session.user = user._id;
 			req.session.email = user.email
-			res.redirect('/dashboard')
+			res.redirect('/signin')
 		}
 	}).catch((error) => {
 		res.status(400).redirect('/login')
