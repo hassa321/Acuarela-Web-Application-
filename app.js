@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/signin', (req, res) => {
+	
 	console.log('sadasd')
 	res.sendFile(__dirname + '/views/signin.html')
 
