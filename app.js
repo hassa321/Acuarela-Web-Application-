@@ -1,246 +1,166 @@
-'use strict';
-const express = require('express')
-const port = process.env.PORT || 3000
-const bodyParser = require('body-parser') // middleware for parsing HTTP body
-const { ObjectID } = require('mongodb')
-const cors  = require('cors')
-var http=require('http');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var bodyParser = require('body-parser');
+var bcrypt = require('bcryptjs');
+var cors = require('cors');
+var session = require('express-session');
+var passport = require('passport');
+var expressValidator = require('express-validator');
+var LocalStrategy = require('passport-local').Strategy;
+var multer = require('multer');
+var upload = multer({dest:'./uploads'});
+var flash = require('connect-flash');
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+var db = mongoose.connection;
 
+var User = require('./models/user');
 
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
-const { mongoose } = require('./db/mongoose')
+var app = express();
 
-// import the models
-const { Ad } = require('./models/ad')
-const { User } = require('./models/user')
+// view engine setup
+/*app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'html');*/
 
-const app = express();
-var server = http.Server(app)
-app.use(express.static(__dirname + '/'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended:true }))
-//
-app.use(cors())
+// var { Ad } = require('./models/ad');
+// var { User } = require('./models/user');
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 
+//handle sessions
+app.use(session({
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: true
+}));
 
-app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/views/index.html')
-	
-})
+//passport
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.get('/signin', (req, res) => {
-	
-	console.log('sadasd')
-	res.sendFile(__dirname + '/views/signin.html')
+//validator
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value) {
+    var namespace = param.split('.')
+    ,root = namespace.shift()
+    ,formParam = root;
 
-})  
-app.get('/register', (req, res) => {
-})
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']'
+    }
+    return {
+      param: formParam,
+      msg: msg,
+      value: value
+    };
+  }
+}));
 
-app.get('/admin', (req, res) => {
-})
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
 
-app.get('/profile', (req, res) => {
-})
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
-app.get('/newpost', (req, res) => {
-})
+//router
+app.get('/signin', function(req, res, next) {
+  res.sendFile(__dirname + '/public/signin.html');
+});
+app.get('/register', function(req, res, next) {
+  res.sendFile(__dirname + '/public/register.html');
+});
+app.post('/register', function(req, res, next) {
+  var name = req.body.name;
+  var username = req.body.username;
+  var password = req.body.password;
+  var confirm_password = req.body.comfirm;
+  var gender = req.body.gender;
+  if(req.body.phone){
+    var phone = req.body.phone;
+  }else{
+    var phone = '';
+  }
+  var email = req.body.email;
+  if(req.body.campus){
+    var campus = req.body.campus;
+  }else{
+    var campus = '';
+  }
+  req.checkBody('name', 'Name filed is empty').notEmpty();
+  req.checkBody('email', 'Email field is empty').notEmpty();
+  req.checkBody('username', 'Username field is empty').notEmpty();
+  req.checkBody('password', 'Password field is empty').notEmpty();
+  req.checkBody('confirm', 'Confirm password field is empty').notEmpty();
+  req.checkBody('gender', 'Gender field is empty').notEmpty();
+  req.checkBody('password', 'Password must be at least 3 characters').isLength({min: 3});
+  req.checkBody('confirm', 'Passwords do not match').equals(password);
+  var err = req.validationErrors();
+  if(err){
+    res.sendFile(__dirname +'/public/register.html', {errors: err});
+    console.log(err);
+  }else{
+    var newUser = new User({
+      name: name,
+      username: username,
+      password: password,
+      gender: gender,
+      phone: phone,
+      email: email,
+      campus: campus,
+      status: 1
+    });
+    User.createUser(newUser, function(err, user){
+      if(err) throw err;
+      console.log(user);
+    });
+    req.flash('success', 'Registered');
+    res.location('/');
+    res.redirect('/');
+  }
+});
 
-app.post('/ads',(req, res)=> {
-	// add new ad to database
+app.get('/post', function(req, res, next) {
+  res.sendFile(__dirname + '/public/post.html');
+});
+app.post('/post', upload.single('photo'), function(req, res, next) {
 
-	/* 
-	Request body expects:
-	{
-	"title": <Ad>
-	"description": <Advertisement description>
-    "type": <Ad Type>
-    "class_code": <Class code add belongs to>
-	}
-	*/
-	// Create a new Advertisment
-	const Advert = new Ad({
-		title: req.body.title,
-		price: req.body.price,
-		type: req.body.type,
-        location: req.body.location 
-	})
+});
+app.get('/admin', function(req, res, next) {
+  res.sendFile(__dirname + '/public/admin.html');
+});
+app.get('/profile', function(req, res, next) {
+  res.sendFile(__dirname + '/public/profile.html');
+});
 
-	// Save advertisement to the database
-	Advert.save().then((result) => {
-		res.send(result)
-	}, (error) => {
-		res.status(400).send(error) // 400 for bad request
-	})
+//catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
 
-})
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-
-app.get('/ads', (req, res) => {
-	// Add code here
-	Ad.find().then((advert) => {
-		res.send( advert );
-	}, (error) => {
-		res.status(400).send(error);
-	});
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
 
-
-
-app.get('/ads/:id', (req, res) => {
-	// get ad by ad_Id
-	const objId = req.params.id
-	// check if ID is valid ID
-	if (!ObjectID.isValid(objId)){
-		res.status(404).send()
-	}
-	// find advertisement 
-	Ad.findById(objId).then((advert) => {
-		// if Ad doesnt exist then send 404
-		if(!advert){
-			res.status(404).send()
-		}else{
-			// send Ad  back
-			res.send(advert)
-		}
-	}).catch((error)=>{
-		res.status(400).send(error)
-	})
-
-})
-
-
-app.delete('/ads/:id',(req,res)=>{
-// Add code here
-
-	// get paramters from body of request
-	const id = req.params.id;
-			
-	if (!ObjectID.isValid(id)) {
-		return res.status(404).send();
-	} 
-	Ad.findOneAndDelete({_id: req.params.id}, req.body, function(err,data)
-	{
-    if(!err){
-        console.log("Deleted");
-        res.send(data)
-    }
-	})
-})
-////// --end of routes for ads ----/// 
-////// start route for users ----////
-/** User routes **/
-
-
-//
-// User login and logout routes
-
-app.post('/users/signin', (req, res) => {
-	const username = req.body.username
-	console.log(`username${username}`)
-	
-	const password = req.body.password
-	console.log(`password${password}`)
-	
-	User.findByEmailPassword(username, password).then((user) => {
-		if(!user) {
-
-			res.redirect('/signin')
-		} else {
-			// Add the user to the session cookie that we will
-			// send to the client
-			req.session.user = user._id;
-			req.session.email = user.email
-			res.redirect('/')
-		}
-	}).catch((error) => {
-		console.log('abs')
-		res.status(400).redirect('/signin')
-	})
-})
-
-app.get('/users/logout', (req, res) => {
-	req.session.destroy((error) => {
-		if (error) {
-			res.status(500).send(error)
-		} else {
-			res.redirect('/')
-		}
-	})
-})
-
-
-// Middleware for authentication for resources
-const authenticate = (req, res, next) => {
-	if (req.session.user) {
-		User.findById(req.session.user).then((user) => {
-			if (!user) {
-				return Promise.reject()
-			} else {
-				req.user = user
-				next()
-			}
-		}).catch((error) => {
-			res.redirect('/login')
-		})
-	} else {
-		res.redirect('/login')
-	}
-}
-
-
-
-
-
-
-
-
-// add New User
-app.post('/users', (req, res) => {
-
-	// Create a new user
-	const user = new User({
-		username: req.body.username,
-		password: req.body.password
-	})
-
-	// save user to database
-	user.save().then((result) => {
-		res.send(user)
-	}, (error) => {
-		res.status(400).send(error) // 400 for bad request
-	})
-
-})
-// delete user
-app.delete('/users/:id',(req,res)=>{
-// Add code here
-
-	// get paramters from body of request
-	const id = req.params.id;
-			
-	if (!ObjectID.isValid(id)) {
-		return res.status(404).send();
-	} 
-	User.findOneAndDelete({_id: req.params.id}, req.body, function(err,data)
-	{
-    if(!err){
-        console.log("Deleted");
-        res.send(data)
-    }
-	})
-})
-
-
-	
-
-
-
-
-
-
-app.listen(port, () => {
-	console.log(`Listening on port ${port}...`)
-}) 
+module.exports = app;

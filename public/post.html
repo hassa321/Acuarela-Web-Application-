@@ -2,38 +2,39 @@
 <html>
 <head>
   <title>Post Your Ad</title>
-  <link rel="stylesheet" href="../public/styles/post.css">
+  <link rel="stylesheet" href="stylesheets/post.css">
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../public/images/icon.jpg">
+    <link rel="icon" href="images/icon.jpg">
 
     <link href="bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-  <form class="form-post">
-    <select class="form-control" id="type"  required autofocus>
+  <form class="form-post" action="/post" method="post" enctype="multipart/form-data">
+    <select name="category" class="form-control" id="category" onchange="tag()" required autofocus>
       <option value="" disabled selected style="display:none">Choose a subject category</option>
       <option value="">Textbook</option>
       <option value="">Course Notes</option>
       <option value="appliance">Electronics</option>
-      <option value="appliance">iClicker</option>
+      <option value="appliance">Stationery</option>
+      <option value="appliance">IClicker</option>
       <option value="appliance">Calculator</option>
       <option value="appliance">Others</option>
     </select>
-    <select class="form-control" id="category" required autofocus>
+    <select name="type" class="form-control" id="type" onchange="ifPrice()" required autofocus>
       <option value="" disabled selected style="display:none">Choose the Ad type</option>
       <option value="">Selling</option>
       <option value="">Swapping/Trading</option>
       <option value="">Giveaway</option>
       <option value="">Wanting</option>
     </select>
-    
-    <select class="form-control" id="type" required autofocus>
+    <input name="price" type="price" class="form-control" placeholder="Price: $" id="price" autofocus>
+    <select name="condition" class="form-control" id="condition" required autofocus>
       <option value="" disabled selected style="display:none">Choose the condition of the product</option>
       <option value="">New</option>
       <option value="">Used - Like New</option>
@@ -42,12 +43,11 @@
       <option value="">Used - Acceptable</option>
     </select>
 
-    <input type="text" class="form-control" placeholder="Title" id="title" required autofocus>
-    <input type="number" class="form-control" placeholder="Price" id="pric" required autofocus>
+    <input name="title" type="text" class="form-control"  maxlength="100" placeholder="Title" required autofocus>
 
-    <textarea type="text" maxlength="500" class="form-control" placeholder="Write something about your Ad.." id="description" required autofocus></textarea>
+    <textarea name="description" type="text" maxlength="500" class="form-control" placeholder="Write something about your Ad.." required autofocus></textarea>
 
-    <select class="form-control" id="location" required autofocus>
+    <select name="location" class="form-control" id="location" required autofocus>
       <option value="" disabled selected style="display:none">Location</option>
         <option value="dt">Downtown Toronto</option>
         <option value="ny">North York</option>
@@ -59,11 +59,17 @@
         <option value="ot">Others</option>
     </select>
 
-    <button id="post" class="post-ad" type="submit" >Post Your Ad h</button>
- 
+    <input name="contact-info" type="contact" class="form-control" id="contact" placeholder="Contact Info" required autofocus>
+
+    <p class="attach">Attach a photo</p>
+    <div class="photo">
+      <input type="file" name="photo" class="form-control" accept="image/*" onchange="" id="photo">
+      <img src="">
+    </div>
+    <button id="post" class="post-ad" type="submit" onclick="postAd()">Post Your Ad</button>
     </form>
   </div>
-  <script src="../public/post.js"></script>
+  <script src="javascripts/post.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
