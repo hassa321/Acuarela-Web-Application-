@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }).done(function(data){
       for(var i = 0; i<data.length;i++){
 
-        price = data[i].price
+        price = `$${data[i].price}`
         title = data[i].title
         var type = data[i].type
         if(data[i].type==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
