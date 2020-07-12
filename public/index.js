@@ -6,9 +6,6 @@
 //window.open(window.open('../views/index.html','_self'))
 
 
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
 
 document.addEventListener("DOMContentLoaded", function() {
    // server call 
