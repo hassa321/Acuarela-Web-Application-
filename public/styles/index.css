@@ -128,11 +128,12 @@ p {
   	border: 1px solid;
   	border-color: #183048;
     border-radius: 16px;
+    min-height: 300px;
     
   }
 
 .option {
-  height: 20%;
+  height: 30%;
 }
   
 
