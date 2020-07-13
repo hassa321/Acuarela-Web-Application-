@@ -131,9 +131,11 @@ p {
     
 }
 
-.option {
-  font-size: 1px;
-}
+.sidenav > option {
+  font-size: 5px;
+  }
+
+
 
 
 
