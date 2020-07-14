@@ -123,6 +123,9 @@ p {
 h4:hover {
   text-decoration: underline;
 }
+h4{
+  font-family: 'Ubuntu', sans-serif;
+}
 
 
 /* The sidebar menu */
