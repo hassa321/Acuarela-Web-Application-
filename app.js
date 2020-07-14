@@ -113,7 +113,7 @@ app.get('/ad/:id', (req, res) => {
 	})
 
 })
-app.get('/ads/:id', (req, res) => {
+app.get('/vert/:id', (req, res) => {
 	// get ad by ad_Id
 	const objId = req.params.id
 	// check if ID is valid ID
