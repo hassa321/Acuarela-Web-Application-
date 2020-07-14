@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
           console.log(data2)
           $("#location").html(" "+data2.location)
         $("title").html(data2.title)
+        $("price").html(data2.price)
+        $("condition").html(data2.type)
+
+
+
         }).fail(function(err){
         
         console.log("ERROR HEr1!")
