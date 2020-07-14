@@ -53,6 +53,7 @@ $(".clear-btn").click(function(){
   $('#condition').val("0")
   category=condition=location=0
   console.log("category: "+category+"condition: "+condition + " location: "+location);
+  loadAds(data2,0,0,0)
 
 })
 
