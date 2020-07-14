@@ -84,6 +84,12 @@ $(".filter-btn").click(function(){
 
 $(".clear-btn").click(function(){
   $('#category').val("0")
+  $('#type').val("0")
+  $('#location').val("0")
+  $('#condition').val("0")
+  category=type=condition=location=0
+  console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
+
 })
 
 
