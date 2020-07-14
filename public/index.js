@@ -90,7 +90,7 @@ function loadAds (data,category,condition,location){
         $("<h4>",{class: "product_title"}).text(
             title
         )
-    ,$("<h4>",{class: ""}).text(
+    ,$("<h3>",{class: ""}).text(
       price
   ))
 ).appendTo($("#abc"))
