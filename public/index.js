@@ -63,7 +63,10 @@ $(".filter-btn").click(function(){
  
 
 
-  console.log("Category + "); 
+  console.log("Category +" $("#category")); 
+
+  console.log("anab" +  $("#category").value ); 
+
 
 
 
