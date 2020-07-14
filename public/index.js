@@ -84,6 +84,7 @@ $(".filter-btn").click(function(){
 
 $(".clear-btn").click(function(){
   $('#category').val("0")
+})
 
 
 
