@@ -65,7 +65,7 @@ $(".filter-btn").click(function(){
 
  
 
-  console.log(": - > " +  $("#category").value()); 
+  console.log(": - > " +  $(this).children("option:selected").val());
 
 
 
