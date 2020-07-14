@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       $("<div>", {class: "posting"}).append(
         $("<div>", {class: "thumbnail"}).append(
-            $("<img>",{src:img class ="rounded"}),
+            ($("<img>",{src:img })).addClass("rounded"),
             $("<div", {class:"caption"}).append(
             )
             
