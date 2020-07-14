@@ -43,6 +43,7 @@ h2 i {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	left: 0;
   }
   .navbar-brand {
 	font-size: 15px;
