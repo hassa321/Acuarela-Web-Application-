@@ -66,7 +66,7 @@ $(".filter-btn").click(function(){
   var c = $('#category').find(":selected").text();
 
 
-  console.log(": - > " +  c);
+  console.log( c);
 
 
 
