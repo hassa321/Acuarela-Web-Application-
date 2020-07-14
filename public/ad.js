@@ -18,4 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("ERROR HEr1!")
         });
 
+        $("#location").html(data2.location)
+        $("title").html(data2.title)
+
 })
