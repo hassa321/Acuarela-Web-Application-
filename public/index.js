@@ -1,3 +1,5 @@
+var data2;
+
 document.addEventListener("DOMContentLoaded", function() {
    // server call 
   // server call will bring JSON file of ad elemets
@@ -14,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     method: "get", 
     url: "/ads",
     }).done(function(data){
-      loadAds(data,0,0,0,0)
+    data2=data
+      loadAds(data2,0,0,0,0)
     }).fail(function(err){
     
     console.log("ERROR HEr1!")
@@ -39,7 +42,7 @@ $(".filter-btn").click(function(){
 
   console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
   
-  loadAds(category,type,condition,location)
+  loadAds(data2,category,type,condition,location)
 
 
 
