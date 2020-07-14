@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
    // server call 
   // server call will bring JSON file of ad elemets
     var posting;
+    var id;
     var thumbnail;
     var img;
     var caption;
@@ -67,6 +68,7 @@ function loadAds (data,category,condition,location){
       title = data[i].title
       cat = data[i].type
       condit = data[i].condition
+      id = data[i]._id
       console.log('condit:'+condit + "condition:"+ condition)
 
       if((category!=cat && category!=0) || (condit!=condition&&condition!=0) || (data[i].location!=location&&location!=0)){
@@ -87,7 +89,7 @@ function loadAds (data,category,condition,location){
         
     ), 
     $("<div>", {class: "inner"}).append(
-        $("<h4>",{class: "product_title",href=`acuarela.ca/${data[i]._id}`}).text(
+        $("<h4>",{class: "product_title",href: `http:acuarela.ca/${data[i]._id}`}).text(
             title
         )
     ,$("<h3>",{class: ""}).text(
