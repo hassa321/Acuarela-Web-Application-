@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
           $("#location").html(" "+data2.location)
         $("#title").text(data2.title)
         $("#price").text("$"+data2.price)
+        $("#desc").text("$"+data2.desc)
+        $("#phone").text("$"+data2.phone)
+        $("#email").text("$"+data2.email)
+        $("#name").text("$"+data2.name)
+
 
 
 
