@@ -13,12 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }).done(function(data){
         data2=data
           console.log(data2)
+          $("#location").html(data2.location)
+        $("title").html(data2.title)
         }).fail(function(err){
         
         console.log("ERROR HEr1!")
         });
 
-        $("#location").html(data2.location)
-        $("title").html(data2.title)
+        
 
 })
