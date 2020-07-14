@@ -120,6 +120,11 @@ p {
     border: black
 }
 
+h4:hover {
+  text-decoration: underline;
+}
+
+
 /* The sidebar menu */
 .sidenav {
     width: 220px;
