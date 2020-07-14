@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       $("<div>", {class: "posting"}).append(
         $("<div>", {class: "thumbnail"}).append(
-            $("<img>",{src:img}),
+            $("<img>",{src:img class ="rounded"}),
             $("<div", {class:"caption"}).append(
             )
             
@@ -75,7 +75,7 @@ $(".filter-btn").click(function(){
 
 
   console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
-  
+
   
 
 
