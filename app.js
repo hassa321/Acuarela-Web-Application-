@@ -113,6 +113,27 @@ app.get('/ad/:id', (req, res) => {
 	})
 
 })
+app.get('/ads/:id', (req, res) => {
+	// get ad by ad_Id
+	const objId = req.params.id
+	// check if ID is valid ID
+	if (!ObjectID.isValid(objId)){
+		res.status(404).send()
+	}
+	// find advertisement 
+	Ad.findById(objId).then((advert) => {
+		// if Ad doesnt exist then send 404
+		if(!advert){
+			res.status(404).send()
+		}else{
+			// send Ad  back
+			res.send(advert)
+		}
+	}).catch((error)=>{
+		res.status(400).send(error)
+	})
+
+})
 
 
 app.delete('/ads/:id',(req,res)=>{

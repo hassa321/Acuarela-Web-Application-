@@ -7,4 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
     
     console.log(id)
 
+    $.ajax({ 
+        method: "get", 
+        url: "/ads/id",
+        }).done(function(data){
+        data2=data
+          console.log(data2)
+        }).fail(function(err){
+        
+        console.log("ERROR HEr1!")
+        });
+
 })
