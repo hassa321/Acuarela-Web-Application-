@@ -89,7 +89,7 @@ function loadAds (data,category,condition,location){
         
     ), 
     $("<div>", {class: "inner"}).append(
-        $("<h4>",{class: "product_title",href: `http:acuarela.ca/${data[i]._id}`}).text(
+        $("<h4>",{class: "product_title",href: "https:google.ca"}).text(
             title
         )
     ,$("<h3>",{class: ""}).text(
