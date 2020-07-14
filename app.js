@@ -104,7 +104,7 @@ app.get('/ad/:id', (req, res) => {
 		if(!advert){
 			res.status(404).send()
 		}else{
-			fs.readFile(__dirname + '/views/ad.html', (err, html) => {
+			fs.readFile(__dirname + '/views/ad.html','utf-8', (err, html) => {
 				res.send(ejs.render(html, JSON.stringify(advert)))
 			  })
 		}
