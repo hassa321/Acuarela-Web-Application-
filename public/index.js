@@ -65,7 +65,7 @@ $(".filter-btn").click(function(){
 
  
 
-  console.log("anab" +  $("#category").val()); 
+  console.log(": - > " +  $("#category").text()); 
 
 
 
