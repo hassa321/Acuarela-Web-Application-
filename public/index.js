@@ -63,7 +63,7 @@ $("filter-btn").click(function(){
  
 
 
-  console.log("Category + " +$("#category").value ); 
+  console.log("Category + "); 
 
 
 
