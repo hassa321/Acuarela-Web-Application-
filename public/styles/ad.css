@@ -1,6 +1,7 @@
 body {
   max-width: 1000px;
   margin: auto;
+  background-image: url("../images/bgd.jpg");
 }
 .profile-info {
     width: 250px;
