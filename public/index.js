@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // do everything here.
 
-$("filter-btn").submit(function(){        
+$(".filter-btn").click(function(){        
  
 
 
