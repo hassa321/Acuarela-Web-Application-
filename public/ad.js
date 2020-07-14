@@ -20,8 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
         $("#phone").text(data2.phone)
         $("#email").text(data2.email)
         $("#name").text(data2.name)
-        $("#img").attr("src", data2.img);
-        console.log(data2.img)
+        $("#img").attr("src", data2.img).load(function(){
+            this.width;   // Note: $(this).width() will not work for in memory images
+        
+        });
 
 
 
