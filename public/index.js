@@ -59,11 +59,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // do everything here.
 
+var category
+var type 
+var condition
+var location
+
 $(".filter-btn").click(function(){        
  
 
 
-  console.log($('#category').find(":selected").val());
+  category = $('#category').find(":selected").val();
+  type = $('#type').find(":selected").val();
+  condition = $('#condition').find(":selected").val();
+  location = $('#location').find(":selected").val();
+
+
+  console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
+  
+  
+
 
 
 })
