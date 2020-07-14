@@ -59,10 +59,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // do everything here.
 
-$("filter-btn").addEventListener("click"), function() {
+$("filter-btn").click(function(){        
+ 
+
 
   console.log("Category + " +$("#category").value ); 
-  
+
 
 
 }
