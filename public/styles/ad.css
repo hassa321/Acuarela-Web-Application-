@@ -37,6 +37,17 @@ h2 i {
 	min-height: 300px;
 	overflow: hidden;
 }
+.navbar-default {
+	background-color: rgba(255, 255, 255, 0.6);
+	border: none;
+	position: fixed;
+	width: 100%;
+	top: 0;
+  }
+  .navbar-brand {
+	font-size: 15px;
+	cursor: pointer;
+  }
 
 .profile-ad-img {
 	width: 160px;
