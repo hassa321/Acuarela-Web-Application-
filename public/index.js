@@ -76,11 +76,16 @@ $(".filter-btn").click(function(){
 
   console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
 
-  
+
 
 
 
 })
+
+$(".clear-btn").click(function(){
+  $('#category').val("0")
+
+
 
 
   
