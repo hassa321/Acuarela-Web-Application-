@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     $.ajax({ 
         method: "get", 
-        url: "/advert/id",
+        url: "/vert/id",
         }).done(function(data){
         data2=data
           console.log(data2)

@@ -136,7 +136,7 @@ app.get('/ads/:id', (req, res) => {
 })
 
 
-app.delete('/advert/:id',(req,res)=>{
+app.delete('/vert/:id',(req,res)=>{
 // Add code here
 
 	// get paramters from body of request
