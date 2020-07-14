@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     
     //var obj = JSON.parse(objSentFromServer);
-    console.log(window.location.href)
+    var url = window.location.href 
+
+    var id = url.split("/").pop();
+    
+    console.log(id)
 
 })
