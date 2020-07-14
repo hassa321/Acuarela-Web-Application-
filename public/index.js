@@ -62,11 +62,14 @@ function loadAds (data,category,condition,location){
   $("#abc").empty()
   for(var i = 0; i<data.length;i++){
     
+      price = `$${data[i].price}`
+      title = data[i].title
+      cat = data[i].type
+      condit = data[i].condition
 
-    price = `$${data[i].price}`
-    title = data[i].title
-    cat = data[i].type
-    condit = data[i].condition
+      if((category!=cat && category!=0) || (condit!=condition&&condition!=0) || (data[i].location!=location&&location!=0)){
+        continue
+      }else{
     if(cat==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
     if (cat==="iClicker"){img="../public/images/iClickers.jpg"}
     if(cat==="Electronics"){img="../public/images/Electronics.jpg"}
@@ -92,7 +95,7 @@ function loadAds (data,category,condition,location){
         }
 
 }
-
+}
   
   });
 
