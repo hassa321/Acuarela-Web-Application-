@@ -1,5 +1,6 @@
 var data2;
 
+
 document.addEventListener("DOMContentLoaded", function() {
    // server call 
   // server call will bring JSON file of ad elemets
@@ -64,16 +65,18 @@ function loadAds (data,category,type,condition,location){
 
   $("#abc").empty()
   for(var i = 0; i<data.length;i++){
+    
 
     price = `$${data[i].price}`
     title = data[i].title
-    var type = data[i].type
-    if(data[i].type==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
-    if (data[i].type==="iClicker"){img="../public/images/iClickers.jpg"}
-    if(data[i].type==="Electronics"){img="../public/images/Electronics.jpg"}
-    if(data[i].type==="Course Notes"){img="../public/images/notes.jpg"}
-      if(data[i].type==="Calculator"){img="../public/images/Calculators.jpg"}
-        if(data[i].type==="Others"){img="../public/images/others.png"}
+    cat = data[i].type
+    condit = data[i].condition
+    if(cat==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
+    if (cat==="iClicker"){img="../public/images/iClickers.jpg"}
+    if(cat==="Electronics"){img="../public/images/Electronics.jpg"}
+    if(cat==="Course Notes"){img="../public/images/notes.jpg"}
+      if(cat==="Calculator"){img="../public/images/Calculators.jpg"}
+        if(cat==="Others"){img="../public/images/others.png"}
 
   $("<div>", {class: "posting"}).append(
     $("<div>", {class: "thumbnail"}).append(
