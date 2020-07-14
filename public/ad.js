@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var url = window.location.href 
 
     var id = url.split("/").pop();
-    
+    var data2;
     console.log(id)
 
     $.ajax({ 
