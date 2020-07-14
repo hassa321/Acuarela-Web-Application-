@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var caption;
     var h4;
     var h4text;
-    var type;
     var price;
     var priceNumber;
     $.ajax({ 
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
 // do everything here.
 
 var category
-var type 
 var condition
 var location
 
@@ -36,14 +34,13 @@ $(".filter-btn").click(function(){
 
 
   category = $('#category').find(":selected").val();
-  type = $('#type').find(":selected").val();
   condition = $('#condition').find(":selected").val();
   location = $('#location').find(":selected").val();
 
 
-  console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
+  console.log("category: "+category+" condition: "+condition + " location: "+location);
   
-  loadAds(data2,category,type,condition,location)
+  loadAds(data2,category,condition,location)
 
 
 
@@ -52,16 +49,15 @@ $(".filter-btn").click(function(){
 
 $(".clear-btn").click(function(){
   $('#category').val("0")
-  $('#type').val("0")
   $('#location').val("0")
   $('#condition').val("0")
-  category=type=condition=location=0
-  console.log("category: "+category+" type: "+type+" condition: "+condition + " location: "+location);
+  category=condition=location=0
+  console.log("category: "+category+"condition: "+condition + " location: "+location);
 
 })
 
 
-function loadAds (data,category,type,condition,location){
+function loadAds (data,category,condition,location){
 
   $("#abc").empty()
   for(var i = 0; i<data.length;i++){
