@@ -3,6 +3,8 @@ const express = require('express')
 const port = process.env.PORT || 3000
 const bodyParser = require('body-parser') // middleware for parsing HTTP body
 const { ObjectID } = require('mongodb')
+let ejs = require('ejs')
+let fs = require('fs')
 const cors  = require('cors')
 var http=require('http');
 
@@ -89,7 +91,7 @@ app.get('/ads', (req, res) => {
 
 
 
-app.get('/ads/:id', (req, res) => {
+app.get('/ad/:id', (req, res) => {
 	// get ad by ad_Id
 	const objId = req.params.id
 	// check if ID is valid ID
@@ -102,8 +104,9 @@ app.get('/ads/:id', (req, res) => {
 		if(!advert){
 			res.status(404).send()
 		}else{
-			// send Ad  back
-			res.send(advert)
+			fs.readFile(__dirname + '/public/ad.html', (err, html) => {
+				res.send(ejs.render(html, JSON.stringify(advert)))
+			  })
 		}
 	}).catch((error)=>{
 		res.status(400).send(error)

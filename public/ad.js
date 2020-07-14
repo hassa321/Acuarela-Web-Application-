@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-    console.log("here:");
+    
+    var obj = JSON.parse(<%= objSentFromServer %>);
+    console.log(obj)
 
 })
