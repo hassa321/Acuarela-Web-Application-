@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $("#email").text(data2.email)
         $("#name").text(data2.name)
     
-        $("<div>", {class: "profile-ad-img", src=data2.img}).append($("#profile-ad-preview"));
+        $("<div>", {class: "profile-ad-img", src=data2.img}).append($(".profile-ad"));
 
 
 
