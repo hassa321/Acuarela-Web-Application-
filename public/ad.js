@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
         $("#phone").text(data2.phone)
         $("#email").text(data2.email)
         $("#name").text(data2.name)
-    
-        $("<div>", {class: "profile-ad-img", src=data2.img}).append($(".profile-ad"));
+        $(".profile-ad-img").attr("src", data2.img)
+        
 
 
 
