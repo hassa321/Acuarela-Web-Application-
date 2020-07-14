@@ -61,12 +61,13 @@ $(".clear-btn").click(function(){
 
 
 function loadAds (data,category,type,condition,location){
+
+  $("#abc").empty()
   for(var i = 0; i<data.length;i++){
 
     price = `$${data[i].price}`
     title = data[i].title
     var type = data[i].type
-    console.log(condition)
     if(data[i].type==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
     if (data[i].type==="iClicker"){img="../public/images/iClickers.jpg"}
     if(data[i].type==="Electronics"){img="../public/images/Electronics.jpg"}
