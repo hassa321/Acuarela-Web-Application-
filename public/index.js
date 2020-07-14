@@ -63,7 +63,7 @@ $(".filter-btn").click(function(){
  
 
 
-  console.log($('category').val())
+  console.log($('#category').find(":selected").val());
 
 
 })
