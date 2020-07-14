@@ -58,8 +58,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 // do everything here.
-    
-  console.log('LOADED!!')
+
+$("filter-btn").addEventListener("click"), function() {
+
+  console.log("Category + " +$("#category").value ); 
+  
+
+
+}
+
+
   
   });
 
