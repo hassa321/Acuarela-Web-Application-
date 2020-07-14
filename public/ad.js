@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
           console.log(data2)
           $("#location").html(" "+data2.location)
         $("#title").text(data2.title)
-        $("#price").text(data2.price)
-        $("#condition").text(data2.type)
+        $("#price").text("$"+data2.price)
 
 
 
