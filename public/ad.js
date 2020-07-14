@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $("#email").text(data2.email)
         $("#name").text(data2.name)
         $("#img").attr("src", data2.img);
+        console.log(data2.img)
 
 
 
