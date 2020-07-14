@@ -74,12 +74,7 @@ function loadAds (data,category,condition,location){
       if((category!=cat && category!=0) || (condit!=condition&&condition!=0) || (data[i].location!=location&&location!=0)){
         continue
       }else{
-    if(cat==="Textbook"){img="https://image.slidesharecdn.com/introductiontoalgorithms3rdedition-140128021114-phpapp02/95/introduction-to-algorithms-3rd-edition-1-638.jpg?cb=1390876516"}
-    if (cat==="iClicker"){img="../public/images/iClickers.jpg"}
-    if(cat==="Electronics"){img="../public/images/Electronics.jpg"}
-    if(cat==="Course Notes"){img="../public/images/notes.jpg"}
-      if(cat==="Calculator"){img="../public/images/Calculators.jpg"}
-        if(cat==="Others"){img="../public/images/others.png"}
+    img=data[i].img
 
   $("<div>", {class: "posting"}).append(
     $("<div>", {class: "thumbnail"}).append(
