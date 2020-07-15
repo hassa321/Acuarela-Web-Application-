@@ -12,7 +12,7 @@ ________
 
 access the heroku app, using 
 
-acuarela.herokuapp.com 
+acuarela.ca
 
 
 Once on this page you can see all the current ads on the database. 
