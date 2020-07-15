@@ -15,7 +15,7 @@ body {
   background-color:transparent;
   width: 100%;
   height: 700px;
-  border-bottom: dashed;
+  border-bottom: solid; 
 }
 h1 {
   font-size: 20px;
