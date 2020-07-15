@@ -35,7 +35,7 @@ app.get('/post', (req, res) => {
 	
 })
 app.get('/allAds', (req, res) => {
-	res.sendFile(__dirname + '/views/allAds.html')
+	res.sendFile(__dirname + '/views/allads.html')
 	
 })
 app.get('/signin', (req, res) => {
