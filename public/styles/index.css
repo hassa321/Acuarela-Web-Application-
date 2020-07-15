@@ -149,14 +149,11 @@ p {
 }
 
 #find{  
-  
-}
-
-.btn {
   height: 250px;
   width:250px;
-
 }
+
+
 #button-div{
   display: flex;
   justify-content: center;
