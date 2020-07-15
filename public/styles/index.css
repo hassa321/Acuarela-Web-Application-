@@ -38,6 +38,7 @@ h1 a:hover{
   position: fixed;
   width: 100%;
   top: 0;
+  padding-top: 0;
 }
 .navbar-brand {
   font-size: 15px;
