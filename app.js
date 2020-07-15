@@ -30,6 +30,18 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/views/index.html')
 	
 })
+app.get('/post', (req, res) => {
+	res.sendFile(__dirname + '/views/post.html')
+	
+})
+app.get('/allAds', (req, res) => {
+	res.sendFile(__dirname + '/views/allAds.html')
+	
+})
+app.get('/signin', (req, res) => {
+	res.sendFile(__dirname + '/views/signin.html')
+	
+})
 
 app.get('/signin', (req, res) => {
 	
