@@ -138,7 +138,7 @@ p {
   left: 350px;
   padding: 0;
   margin: 0;
-  background-color: white;
+  
 }
 
 .left-element {
@@ -147,13 +147,34 @@ p {
   display: inline-block;
   float: left;
 }
-
-
+#aboutUs{
+    text-align: center; 
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    padding-bottom: 5px;
+    
+}
 
 #button-div{
   display: flex;
   justify-content: center;
-  background-color: white;
+  padding-bottom: 20px;
+  border-bottom:solid;
+  border-bottom-style: thin;
+  border-bottom-width: 1px;
+}
+
+.aboutMessage{
+  
+  border: 1px solid black;
+  border-radius: 10px;
+	padding: 20px;
+	margin: 0px 0 0;
+	width: 1000px;
+  min-height: 300px;
+  margin-left: 100px ;
+  margin-bottom: 200px;
+	overflow: hidden;
 }
 
 .right-element {
@@ -238,8 +259,9 @@ h3{
   }
   .bottom {
     margin: 50px 22% 0 22%;
+    margin-bottom: 10px;
     width: 800px;
-    height: 100px;
+    height: 10px;
     text-align: center;
     color: #777777;
     border-top: 1px solid black;
