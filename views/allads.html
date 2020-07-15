@@ -1,0 +1,35 @@
+<!-- Side navigation bar -->
+        <!-- load classes from user profile -->
+        <div class="sidenav">
+            <select class="form-control form-control-lg" id="category">
+              <option value="0" disabled selected style="display:none">Subject Category</option>
+              <option value="Textbook">Textbook</option>
+              <option value="Course Notes">Course Notes</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Stationery">Stationery</option>
+              <option value="iClicker">IClicker</option>
+              <option value="Calculator">Calculator</option>
+              <option value="Others">Others</option>
+            </select>
+            <select class="form-control" id="condition" autofocus>
+              <option value="0" disabled selected style="display:none">Condition</option>
+              <option value="New">New</option>
+              <option value="Like New">Used - Like New</option>
+              <option value="Very Good">Used - Very Good</option>
+              <option value="Good">Used - Good</option>
+              <option value="Acceptable">Used - Acceptable</option>
+            </select>
+            <select class="form-control" id="location">
+                <option value="0" disabled selected style="display:none">Location</option>
+                <option value="dt">Downtown Toronto</option>
+                <option value="ny">North York</option>
+                <option value="ms">Missisauga</option>
+                <option value="sc">Scarborough</option>
+                <option value="mk">Markham</option>
+                <option value="vh">Vaughan</option>
+                <option value="rh">Richmond Hill</option>
+                <option value="ot">Others</option>
+            </select>
+            <button class="filter-btn" type="submit" onclick="">Filter <i class="fas fa-filter"></i></button><br>
+            <button class="clear-btn" type="submit" onclick="">Clear</button>
+        </div>

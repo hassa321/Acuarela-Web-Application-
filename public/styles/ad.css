@@ -1,8 +1,8 @@
 body {
   max-width: 1000px;
   margin: auto;
-  color: white;
-  background-image: url("../images/bgd.jpg");
+  color: white;	
+  background-image: url("../images/trees.png");
 }
 .profile-info {
     width: 250px;
