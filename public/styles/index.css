@@ -143,14 +143,23 @@ p {
 
 .left-element {
   width: 700px;
-  height: 500px;
+  height: 400px;
   display: inline-block;
   float: left;
 }
 
+#find{  
+  
+}
+#button-div{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
 .right-element {
   width: 420px;
-  height: 500px;
+  height: 400px;
   display: inline-block;
   float: left;
 }
