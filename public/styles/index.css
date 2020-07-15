@@ -130,7 +130,7 @@ p {
     text-align: center
 }
 
-.container {
+.container-fluid {
   padding-right: 0%;
   margin-right: 0;
   max-width: 100%;
@@ -138,6 +138,7 @@ p {
   left: 350px;
   padding: 0;
   margin: 0;
+  background-color: white;
 }
 
 .left-element {
