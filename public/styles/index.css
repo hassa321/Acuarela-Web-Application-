@@ -1,8 +1,9 @@
 body {
   font-family: "Times New Roman", Georgia, Serif;
-  background-image: url("../public/images/trees.png");
+  background-image: url("../images/trees.png");
 }
 .cover {
+  //background-image: url("../images/bgd.jpg");
 	height: 500px;
   color: #fff;
   font-family: "Courier New", Courier, monospace;
@@ -45,9 +46,8 @@ h1 a:hover{
 }
 
 .imga{
-  max-width: 100%;
-  width: 1000px;
-  height: 800px;
+  width: 600px;
+  height: 400px;
 
 }
 
