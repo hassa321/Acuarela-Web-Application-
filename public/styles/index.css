@@ -129,6 +129,11 @@ p {
     /* border: 1px solid grey; */
     text-align: center
 }
+.allAds{
+  font-size: 20px;
+
+  background-color: lightgreen
+}
 
 .container-fluid {
   padding-right: 0%;
@@ -138,6 +143,7 @@ p {
   left: 350px;
   padding: 0;
   margin: 0;
+  margin-top: 50px;
   
 }
 
@@ -215,7 +221,7 @@ h3{
 }
 
 
-#tw{
+#tw, #fb, #lkd{
 
   font-size: 32px;
 }
