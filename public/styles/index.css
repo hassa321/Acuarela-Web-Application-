@@ -227,10 +227,6 @@ h3{
     border-radius: 16px;
     
 }
-option {
-  width: 20px;
-}
-
 
 #tw, #fb, #lkd{
 
@@ -252,7 +248,7 @@ option {
     border: 1px solid #183048;
     margin: 20px 0 20px 20px;
     height: 40px;
-    width: 160px;
+    width: 140px;
   }
   .filter-btn {
     color: #183048;
