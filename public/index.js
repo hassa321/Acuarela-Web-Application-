@@ -99,3 +99,5 @@ function loadAds (data,category,condition,location){
   });
 
 
+// Designed by Khalid Hassan
+
