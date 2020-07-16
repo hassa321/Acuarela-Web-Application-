@@ -34,3 +34,8 @@
 //     return false;
 //   }
 // }
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    console.log("YO!")
+})
