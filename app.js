@@ -36,7 +36,7 @@ app.get('/post', (req, res) => {
 	res.sendFile(__dirname + '/views/post.html')
 	
 })
-app.get('/allAds.html', (req, res) => {
+app.get('/allAds', (req, res) => {
 	res.sendFile(__dirname + '/views/allads.html')
 	
 })
