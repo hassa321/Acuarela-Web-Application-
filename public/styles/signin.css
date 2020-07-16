@@ -16,10 +16,11 @@ body {
 	font-size: 15px;
 	cursor: pointer;
   }
-  h1 a {
+  a {
 	cursor: pointer;
 	color: #fff;
   }
+
 
 .form-signin {
   max-width: 330px;
