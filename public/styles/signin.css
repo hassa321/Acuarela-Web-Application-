@@ -15,10 +15,14 @@ body {
   .navbar-brand {
 	font-size: 15px;
 	cursor: pointer;
+	
   }
-  a {
+a {
 	cursor: pointer;
-	color: #fff;
+  }
+
+  #abcd{
+	color: black;
   }
 
 

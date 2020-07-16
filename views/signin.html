@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Work+Sans&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">         -->
+        <link rel="stylesheet" href="../public/styles/index.css">
+        <link rel="icon" href="../public/images/icon.jpg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    </head>
+    <body>
+        <!-- Top navigation bar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" id ="abcd" href="./">ACUARELA</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="search-bar">
+                              <input type="text" class="search-input" placeholder="Search...">
+                              <button class="search-go" type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </li>
+                        
+                        <li class = "findbtn"><a class="allAds" href="/allAds">Find an Item !</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <img src="../public/images/FotoJet.png" class = "imga">  -->
+        <div class="container">
 
-    <title>Sign In</title>
+          <form id="userLoginForm" class="form-signin" action="/users/signin" method="post">
+                        <div>
+            <h2 class="form-signin-heading">Sign In</h2>
+            <label for="email" class="sr-only">Email</label>
+            <input type="text" name="username" class="form-control" placeholder="Email/Username" required autofocus>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password" required autofocus>
+            <p class="needhelp"><a href="#">Need help?</a></p>
+            <button class="signin-btn" type="submit">Sign In</button>
+            <p class="newUser">New to Bookstore? <a href="register.html">Register now</a></p>
+          </form>
+    
+        </div>
+        
+ 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="../public/styles/signin.css" rel="stylesheet">
-  </head>
+        <script src="../public/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar-brand" id ="abcd" href="./">ACUARELA</a>
-          </div>
-          <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                  <li>
-                      <div class="search-bar">
-                        <input type="text" class="search-input" placeholder="Search...">
-                        <button class="search-go" type="submit"><i class="fa fa-search"></i></button>
-                      </div>
-                  </li>
-                  <li><a class="profile"><i class="far fa-user"></i>
-                      <span class="tooltip">My Profile</span></a>
-                  </li>
-                  <li><a class="allAds" href="/allAds">Find An Ad!</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+    </body>
 
-    <div class="container">
 
-      <form id="userLoginForm" class="form-signin" action="/users/signin" method="post">
-                    <div>
-        <h2 class="form-signin-heading">Sign In</h2>
-        <label for="email" class="sr-only">Email</label>
-        <input type="text" name="username" class="form-control" placeholder="Email/Username" required autofocus>
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" name="password" class="form-control" placeholder="Password" required autofocus>
-        <p class="needhelp"><a href="#">Need help?</a></p>
-        <button class="signin-btn" type="submit">Sign In</button>
-        <p class="newUser">New to Bookstore? <a href="register.html">Register now</a></p>
-      </form>
-
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src=""></script>
-
-  </body>
+    <!-- Designed by Khalid Hassan  -->
 </html>

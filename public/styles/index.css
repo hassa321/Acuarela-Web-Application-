@@ -24,9 +24,8 @@ h1 {
   top: 200px;
   left: 25%;
 }
-h1 a {
+.navbar-header {
   cursor: pointer;
-  color: #fff;
 }
 h1 a:hover{
   color: #fff;
@@ -134,14 +133,20 @@ p {
     text-align: center
 }
 .allAds{
-  font-size: 20px;
-
-  background-color: lightgreen
+  font-size: 10px;
+background-color: lightgreen
 }
+
+
 #postAdbtn{
   font-size: 15px;
 
   background-color:lightgreen
+}
+
+.findbtn{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .container-fluid {
@@ -304,3 +309,235 @@ h3{
   }
 
  
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading {
+  margin-bottom: 10px;
+  font-size: 26px;
+	font-weight: 100;
+	color: #724a4a;
+	text-align: center;
+}
+.form-signin .checkbox {
+	margin-bottom: 10px;
+	font-weight: 100;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  color: #efefef;
+	background: rgba(0, 0, 0, .1);
+	border: none;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.needhelp {
+	margin-left: 2px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.needhelp a {
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 100;
+	text-decoration: none;
+	color: #efefef;
+}
+
+.signin-btn {
+	font-size: 15px;
+	font-weight: 100;
+	width: 300px;
+	height: 40px;
+	margin-top: 10px;
+	color: #fdffdd;
+	background: rgba(0, 0, 0, .3);
+	border: none;
+	border-radius: 6px;
+	outline-color: #fbff8c;
+}
+.signin-btn:hover {
+	color: #fdffdd;
+	background: rgba(0, 0, 0, .4);
+}
+
+.newUser {
+	font-size: 14px;
+	font-weight: 100;
+	color: #efefef;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.newUser a {
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 100;
+	text-decoration: none;
+	color: #efefef;
+}
+.newUser a:hover {
+	color: ##fdffdd;
+}
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@hassa321 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+hassa321
+/
+Acuarela-Web-Application-
+1
+0
+0
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+6
+Insights
+Settings
+Acuarela-Web-Application-/public/styles/signin.css
+
+USER front end changes
+Latest commit 5130181 on Apr 2, 2019
+ History
+ 0 contributors
+We found potential security vulnerabilities in your dependencies.
+Only the owner of this repository can see this message.
+
+Executable File  99 lines (94 sloc)  1.72 KB
+  
+body {
+  padding-top: 99px;
+  padding-bottom: 99px;
+  font-family: "Times New Roman", Georgia, Serif;
+  background-image: url("../images/bgd.jpg");
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading {
+  margin-bottom: 10px;
+  font-size: 26px;
+	font-weight: 100;
+	color: #efefef;
+	text-align: center;
+}
+.form-signin .checkbox {
+	margin-bottom: 10px;
+	font-weight: 100;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  color: #efefef;
+	background: rgba(0, 0, 0, .1);
+	border: none;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.needhelp {
+	margin-left: 2px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.needhelp a {
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 100;
+	text-decoration: none;
+	color: #efefef;
+}
+
+.signin-btn {
+	font-size: 15px;
+	font-weight: 100;
+	width: 300px;
+	height: 40px;
+	margin-top: 10px;
+	color: #fdffdd;
+	background: rgba(0, 0, 0, .3);
+	border: none;
+	border-radius: 6px;
+	outline-color: #fbff8c;
+}
+.signin-btn:hover {
+	color: #fdffdd;
+	background: rgba(0, 0, 0, .4);
+}
+
+.newUser {
+	font-size: 14px;
+	font-weight: 100;
+	color: #efefef;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.newUser a {
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 100;
+	text-decoration: none;
+	color: #efefef;
+}
+.newUser a:hover {
+	color: ##fdffdd;
+}
