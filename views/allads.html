@@ -1,41 +1,93 @@
-<!-- Side navigation bar -->
-        <!-- load classes from user profile -->
-        <div class="sidenav">
-            <select class="form-control form-control-lg" id="category">
-              <option value="0" disabled selected style="display:none">Subject Category</option>
-              <option value="Textbook">Textbook</option>
-              <option value="Course Notes">Course Notes</option>
-              <option value="Electronics">Electronics</option>
-              <option value="Stationery">Stationery</option>
-              <option value="iClicker">IClicker</option>
-              <option value="Calculator">Calculator</option>
-              <option value="Others">Others</option>
-            </select>
-            <select class="form-control" id="condition" autofocus>
-              <option value="0" disabled selected style="display:none">Condition</option>
-              <option value="New">New</option>
-              <option value="Like New">Used - Like New</option>
-              <option value="Very Good">Used - Very Good</option>
-              <option value="Good">Used - Good</option>
-              <option value="Acceptable">Used - Acceptable</option>
-            </select>
-            <select class="form-control" id="location">
-                <option value="0" disabled selected style="display:none">Location</option>
-                <option value="dt">Downtown Toronto</option>
-                <option value="ny">North York</option>
-                <option value="ms">Missisauga</option>
-                <option value="sc">Scarborough</option>
-                <option value="mk">Markham</option>
-                <option value="vh">Vaughan</option>
-                <option value="rh">Richmond Hill</option>
-                <option value="ot">Others</option>
-            </select>
-            <button class="filter-btn" type="submit" onclick="">Filter <i class="fas fa-filter"></i></button><br>
-            <button class="clear-btn" type="submit" onclick="">Clear</button>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Work+Sans&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">         -->
+        <link rel="stylesheet" href="../public/styles/index.css">
+        <link rel="icon" href="../public/images/icon.jpg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    </head>
+    <body>
+        <!-- Top navigation bar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" id ="abcd" href="./">ACUARELA</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="search-bar">
+                              <input type="text" class="search-input" placeholder="Search...">
+                              <button class="search-go" type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </li>
+                        <li><a class="profile"><i class="far fa-user"></i>
+                            <span class="tooltip">My Profile</span></a>
+                        </li>
+                        <li><a href="/signin">Sign In</a></li>
+                        <li><a class="post" href="/post">Post Ad</a></li>
+                        <li><a class="allAds" href="/allAds">Find an Item !</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <img src="../public/images/FotoJet.png" class = "imga">  -->
+
+        <div class ="aa"> 
+            <img src="../public/images/FotoJet.png" style='height: 100%; width: 100%; '/>  
+        </div>
+        
+
+        
+        <!-- posts will be loaded from database, based on the class selected -->
+        <div class = "container-fluid">
+                <div class="left-element">
+                    <img src="../public/images/n.png"  class = "left-element"/>
+                </div>
+                <div class="right-element">
+                    <img src="../public/images/n2.png"  class ="right-element"/>
+                </div>
+              
+            
+        </div>
+        <div id = "button-div">
+            <a href="https://acuarela.ca/allads" class="btn btn-primary btn-lg" id="find">Find an Item!</a> 
+
         </div>
 
+        <div class="AboutUs">
+            <h4 id = "aboutUs">About Us </h4>
+        </div>
+
+        <div class="aboutMessage">
+                <h3 id = "ab">This site was designed by Khalid Hassan, for the purpose of creating an alternative, 
+                    dedicated site solely for Students. After Struggling for many years during studies, going through 
+                    various Facebook groups, message boards, and classifieds sites, looking for textbooks and notes, I decided to a create a central place for Students
+                    to buy and Sell various items related to school. <br><br>
+                    For support email:  admin@acuarela.ca
+                </h3> 
+                <i class="fa fa-twitter-square" id="tw" aria-hidden="true"></i>
+                <i class="fa fa-facebook-square" id = "fb" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square"  id ="lkd" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="bottom">Acuarela™ 2020</div>
+ 
+
+        <script src="../public/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    </body>
 
 
-
-
-        <!-- Designed by Khalid Hassan  -->
+    <!-- Designed by Khalid Hassan  -->
+</html>
