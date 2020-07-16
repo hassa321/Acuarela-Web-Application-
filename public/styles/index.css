@@ -227,6 +227,9 @@ h3{
     border-radius: 16px;
     
 }
+option {
+  width: 20px;
+}
 
 
 #tw, #fb, #lkd{
