@@ -220,7 +220,7 @@ h3{
 .sidenav {
     width: 220px;
     position: absolute;
-    top: 500px; /* Stay at the top */
+    top: 100px; /* Stay at the top */
     left: 50px;
   	border: 1px solid;
   	border-color: #183048;
