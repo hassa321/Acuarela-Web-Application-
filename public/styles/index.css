@@ -135,6 +135,11 @@ p {
 
   background-color: lightgreen
 }
+#postAdbtn{
+  font-size: 15px;
+
+  background-color:lightgreen
+}
 
 .container-fluid {
   padding-right: 0%;
@@ -167,6 +172,7 @@ p {
 #ab{
   font-size: 20px ;
   font-family: 'Work Sans', sans-serif;
+
 }
 
 #button-div{
