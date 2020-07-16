@@ -19,7 +19,8 @@ const { User } = require('./models/user')
 const app = express();
 var server = http.Server(app)
 app.use(express.static(__dirname + '/'));
-app.use(express.static(__dirname + '/public/'));
+app.use("/static", express.static("public/styles"))
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true }))
