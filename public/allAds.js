@@ -69,7 +69,6 @@ function loadAds (data,category,condition,location){
       cat = data[i].type
       condit = data[i].condition
       id = data[i]._id
-      console.log('condit:'+condit + "condition:"+ condition)
 
       if((category!=cat && category!=0) || (condit!=condition&&condition!=0) || (data[i].location!=location&&location!=0)){
         continue
