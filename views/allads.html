@@ -38,6 +38,46 @@
             </div>
         </nav>
         <!-- <img src="../public/images/FotoJet.png" class = "imga">  -->
+        <div class="sidenav">
+          <select class="form-control" id="category" onchange="tag()">
+            <option value="" disabled selected style="display:none">Subject Category</option>
+            <option value="">Textbook</option>
+            <option value="">Course Notes</option>
+            <option value="appliance">Electronics</option>
+            <option value="appliance">Stationery</option>
+            <option value="appliance">IClicker</option>
+            <option value="appliance">Calculator</option>
+            <option value="appliance">Others</option>
+          </select>
+          <select class="form-control" id="type">
+            <option value="" disabled selected style="display:none">Ad Type</option>
+            <option value="">Selling</option>
+            <option value="">Swapping/Trading</option>
+            <option value="">Giveaway</option>
+            <option value="">Wanting</option>
+          </select>
+          <select class="form-control" id="type" autofocus>
+            <option value="" disabled selected style="display:none">Condition</option>
+            <option value="">New</option>
+            <option value="">Used - Like New</option>
+            <option value="">Used - Very Good</option>
+            <option value="">Used - Good</option>
+            <option value="">Used - Acceptable</option>
+          </select>
+          <select class="form-control" id="location">
+            <option value="" disabled selected style="display:none">Location</option>
+              <option value="dt">Downtown Toronto</option>
+              <option value="ny">North York</option>
+              <option value="ms">Missisauga</option>
+              <option value="sc">Scarborough</option>
+              <option value="mk">Markham</option>
+              <option value="vh">Vaughan</option>
+              <option value="rh">Richmond Hill</option>
+              <option value="ot">Others</option>
+          </select>
+          <button class="filter-btn" type="submit" onclick="">Filter <i class="fas fa-filter"></i></button><br>
+          <button class="clear-btn" type="submit" onclick="">Clear</button>
+      </div>
 
         
 
