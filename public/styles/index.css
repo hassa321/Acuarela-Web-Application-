@@ -88,6 +88,9 @@ h1 a:hover{
   cursor: pointer;
   margin: 2px 0 0 0;
 }
+#category,#type,#location{
+  width: 180px;
+  }
 .profile .tooltip {
   visibility: hidden;
 	width: 120px;
