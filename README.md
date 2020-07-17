@@ -1,8 +1,8 @@
 
-I have created a Web app Called Acuarela.
+I have created a web-app namedAcuarela.
 
-It is a website designed for Uoft Students to post their belongings such as 
-Books, notes, iCLickers, Calculators, And Other things
+It is designed for Students from the GTA area to post their belongings such as 
+Books, notes, iCLickers, Calculators, and Others for sale,
 
 THE WAY to use the app
 ________
@@ -14,6 +14,7 @@ acuarela.ca
 
 or 
 
+acuarela.herokuapp.ca
 
 
 Once on this page you can see all the current ads on the database. 
