@@ -155,7 +155,7 @@ background-color: lightgreen
 .findbtn{
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: whitesmoke;
+
 }
 
 .container-fluid {
@@ -200,6 +200,7 @@ background-color: lightgreen
   border-bottom:solid;
   border-bottom-style: thin;
   border-bottom-width: 1px;
+  background-color: whitesmoke;
 }
 
 .aboutMessage{
