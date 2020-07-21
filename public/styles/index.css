@@ -1,14 +1,11 @@
 body {
   font-family: "Times New Roman", Georgia, Serif;
-  background-image: url("../images/bgrnd.png");
-}
-.cover {
-  //background-image: url("../images/bgd.jpg");
 	height: 500px;
   color: #fff;
   font-family: "Courier New", Courier, monospace;
   font-weight: 100;
   margin: -20px 0 0 0;
+  background-image: url("../images/egg_shell.png");
 }
 
 .aa{
@@ -17,7 +14,6 @@ body {
   height: 700px;
   border-bottom: solid; 
   border-width: thin;
-  background-image: url("../images/blue-snow.png");
 }
 h1 {
   font-size: 20px;
