@@ -1,6 +1,6 @@
 body {
   font-family: "Times New Roman", Georgia, Serif;
-  background-image: url("../images/trees.png");
+  background-image: url("../images/bgrnd.png");
 }
 .cover {
   //background-image: url("../images/bgd.jpg");
@@ -17,6 +17,7 @@ body {
   height: 700px;
   border-bottom: solid; 
   border-width: thin;
+  background-image: url("../images/trees.png");
 }
 h1 {
   font-size: 20px;
@@ -26,7 +27,9 @@ h1 {
 }
 .navbar-header {
   cursor: pointer;
+  
 }
+.navbar{margin-bottom: none;}
 h1 a:hover{
   color: #fff;
   text-decoration: none;
@@ -38,6 +41,7 @@ h1 a:hover{
   width: 100%;
   top: 0;
   padding-top: 0;
+  margin-bottom: 0;
 }
 #hh{
 min-width: 90%;
@@ -183,7 +187,7 @@ background-color: lightgreen
   content: ' ';
   display: block;
   /* adjust 'height' to position overlay content vertically */
-  height: 80%;
+  height: 75%;
 }
 
 
@@ -236,8 +240,10 @@ background-color: lightgreen
     text-align: center; 
     font-family: 'Playfair Display', serif;
     font-size: 70px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     pointer-events:none;
+    margin-top: 0;
+    margin-bottom:0;
     
 
     
@@ -255,18 +261,27 @@ background-color: lightgreen
   border-bottom:none;
   background-color: whitesmoke;
 }
+.AboutUs{
+  background-image: url("../images/bgrnd.png");
+  color: white;
+}
+.abas{
+  background-image: url("../images/bgrnd.png");
+}
 
 .aboutMessage{
   
   border: 1px solid black;
+  color: white;
   border-radius: 10px;
 	padding: 20px;
 	margin: 0px 0 0;
 	width: 1000px;
   min-height: 200px;
   margin-left: 100px ;
-  margin-bottom: 20px;
-	overflow: hidden;
+  margin-bottom: 0px;
+  overflow: hidden;
+  background-image: url("../images/bgrnd.png");
 }
 
 .right-element {
@@ -359,6 +374,8 @@ h3{
     text-align: center;
     color: #777777;
     border-top: 1px solid black;
+    color:lightcyan;
+    
   }
   /* The navigation menu links */
 
