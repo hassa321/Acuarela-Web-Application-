@@ -27,9 +27,12 @@ h1 {
 }
 .navbar-header {
   cursor: pointer;
+  margin:0;
+  padding-bottom: 0;
   
 }
-.navbar{margin-bottom: none;}
+.navbar{margin-bottom: none;
+padding-bottom: 0;}
 h1 a:hover{
   color: #fff;
   text-decoration: none;
@@ -41,7 +44,8 @@ h1 a:hover{
   width: 100%;
   top: 0;
   padding-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding-bottom: 0;
 }
 #hh{
 min-width: 90%;
