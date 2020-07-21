@@ -20,6 +20,14 @@ const app = express();
 var server = http.Server(app)
 app.use(express.static(__dirname + '/'));
 
+function requireHTTPS(req, res, next) {
+	if (!req.secure) {
+		   return res.redirect('https://' + req.get('host') + req.url);
+	 }
+		 next();
+ }
+ app.use(requireHTTPS);
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:true }))
