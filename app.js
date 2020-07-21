@@ -7,6 +7,8 @@ let ejs = require('ejs')
 let fs = require('fs')
 const cors  = require('cors')
 var http=require('http');
+var sslRedirect = require('heroku-ssl-redirect');
+
 
 
 
@@ -19,14 +21,9 @@ const { User } = require('./models/user')
 const app = express();
 var server = http.Server(app)
 app.use(express.static(__dirname + '/'));
+app.use(sslRedirect());
 
-function requireHTTPS(req, res, next) {
-	if (!req.secure) {
-		   return res.redirect('https://' + req.get('host') + req.url);
-	 }
-		 next();
- }
- app.use(requireHTTPS);
+
 
 
 app.use(bodyParser.json());
