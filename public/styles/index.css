@@ -40,7 +40,11 @@ h1 a:hover{
   padding-top: 0;
 }
 #hh{
-  background-color: blanchedalmond;
+min-width: 90%;
+min-height: 400px;  
+max-width: 99.98%;
+
+
 }
 .navbar-brand {
   font-size: 15px;
@@ -155,29 +159,85 @@ background-color: lightgreen
 .findbtn{
   margin-top: 5px;
   margin-bottom: 5px;
-
 }
 
-.container-fluid {
-  padding-right: 0%;
-  margin-right: 0;
-  max-width: 100%;
-  max-height: 100%;
-  left: 350px;
-  padding: 0;
-  margin: 0;
-  margin-top: 0px;
-  background-color: whitesmoke;
-  
+.img-wrapper {
+  position: relative;
+ }
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 300px;
+  right: 0;
   
 }
 
-.left-element {
-  width: 700px;
-  height: 400px;
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 80%;
+}
+
+
+
+
+#find{
+  background-color:#4CAF50;
+  border: none;
+
+}
+#find {
+  border-radius: 4px;
+  background-color:#4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#find span {
+  cursor: pointer;
   display: inline-block;
-  float: left;
+  position: relative;
+  transition: 0.5s;
 }
+
+#find span:after {
+  
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#find:hover span {
+  padding-right: 25px;
+}
+
+#find:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
 #aboutUs{
     text-align: center; 
     font-family: 'Playfair Display', serif;
