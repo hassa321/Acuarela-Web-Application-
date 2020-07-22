@@ -150,6 +150,7 @@ p {
 }
 .allAds{
   font-size: 15px;
+  font-weight: 900;
 background-color: lightgreen
 }
 
@@ -163,6 +164,7 @@ background-color: lightgreen
 .findbtn{
   margin-top: 5px;
   margin-bottom: 5px;
+  font-weight: 900;
 }
 
 .img-wrapper {
