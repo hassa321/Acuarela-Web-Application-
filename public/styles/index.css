@@ -159,9 +159,7 @@ background-color: lightgreen
 .inner{
   border-radius: 25px;
   border: 2px solid;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
+  
 }
 
 #postAdbtn{
