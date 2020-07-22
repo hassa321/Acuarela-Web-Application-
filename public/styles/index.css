@@ -125,10 +125,11 @@ max-width: 99.98%;
 }
 .thumbnail {
     width: 180px;
-    padding: 0;
+    padding: 0px;
 }
 .thumbnail img{
     width: 100%;
+    padding: 0px;
 }
 .thumbnail .caption {
     padding: 0px;
