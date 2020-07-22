@@ -10,6 +10,9 @@ body {
 	width: 60%;
 	font-size: 17px;
 }
+.container{
+	margin-bottom: 100px;
+}
 
 .form-post .checkbox {
 	font-weight: 100;
@@ -50,7 +53,7 @@ body {
 	display: none;
 }
 .post-ad {
-	background-color: #183048;
+	background-color: lightblue;
     color: reds;
     font-size: 14px;
 	font-weight: 100;
@@ -61,7 +64,7 @@ body {
 	margin: 10px 0 10px 0;
 }
 .post-ad:hover {
-	background-color: #000030;
+	background-color: darkgray;
 }
 
 .attach {
