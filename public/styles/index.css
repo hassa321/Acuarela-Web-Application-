@@ -131,7 +131,7 @@ max-width: 99.98%;
     width: 100%;
 }
 .thumbnail .caption {
-    padding: 9px;
+    padding: 0px;
 }
 .product_title {
     font-size: 1em;
