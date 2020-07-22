@@ -156,6 +156,9 @@ p {
 background-color: lightgreen
 }
 
+.inner{
+border:solid;
+}
 
 #postAdbtn{
   font-size: 15px;
