@@ -103,7 +103,7 @@ max-width: 99.98%;
   cursor: pointer;
   margin: 2px 0 0 0;
 }
-#category,#type,#location{
+#category,#type,#location,#condition{
   width: 180px;
   }
 .profile .tooltip {
